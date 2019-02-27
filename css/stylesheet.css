@@ -145,7 +145,7 @@ nav a:hover {
 	opacity: 1;
 	-webkit-transition: all .5s ease-in 3s;
 	transition: all .5s ease-in 3s;
-	width: 4vw;
+	width: 9vh;
 	z-index: 2;
 	-webkit-animation: bounce 2s infinite 2s;
 	animation: bounce 2s infinite 2s;
