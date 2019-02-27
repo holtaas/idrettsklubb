@@ -1,6 +1,242 @@
-@charset "UTF-8";
+@charset "utf-8";
 /* CSS Document */
 
-body {
-	background: black;
+* {
+	margin: 0;
+	padding: 0;
 }
+
+html {
+	height: 100%;
+	position: relative;
+}
+
+body {
+	background-color: #f1f1f1;
+	font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+/* Header starts */
+
+.nav {
+	display: block;
+	margin: 0 auto;
+	padding: 1.7%;
+	position: fixed;
+	width: 100%;
+	box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+}
+
+/*forskjellig nav farger start */
+.one {
+	background-color:#3866B8;
+}
+
+.two {
+	background-color:#515151;
+}
+
+.three {
+	background-color:#0D0E5B;
+}
+
+.four {
+	background-color:#0F2D0B;
+}
+
+/*forskjellig nav farger ends */
+nav a {
+	transition:0.2s all ease-in-out;
+	text-decoration: none;
+	padding: 3%;
+	text-align: center;
+	border-bottom:2px solid rgba(0,0,0,0);
+	padding-bottom: 1%;
+	color: white;
+	font-size: 16px;
+	opacity: 0.5;
+}
+
+
+.header {
+	display: block;
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+	position: relative;
+	z-index: 100000;
+}
+
+nav a.current {
+	border-bottom:2px solid white;	
+	opacity: 1;
+}
+nav a:hover {
+	transition:0.2s all ease-in-out;
+	border-bottom:2px solid white;	
+	opacity: 1;
+}
+
+#logo {
+	width: 10vw;
+	margin-bottom: -13vh;
+}
+/* Header ends */
+
+/* Index starts */
+.parallax {
+	text-align: center;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 10;
+}
+
+/* parallax ulike steder starts*/ 
+.index {
+	background-image: url(../src/stickFighting.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.prosjektnotater {
+	background-image: url(../src/notesimage.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	font-size: 4vh;
+	text-shadow: 3px 3px #D8D8D8;
+}
+
+.miniprosjekter {
+	background-image: url(../src/miniprosjekter.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	font-size: 4vh;
+	color: white;
+	text-shadow: 3px 3px #313131;
+}
+
+.omMeg {
+	background-image: url(../src/omMeg.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	font-size: 4vh;
+	color: white;
+	text-shadow: 3px 3px #313131;
+}
+
+/* parallax ulike steder ends*/ 
+.index h2 {
+	font-size: 6vh;
+	color: white;
+	text-shadow: 3px 3px #313131;	
+}
+
+.index h1 {
+	font-size: 8vh;
+	color: white;
+	text-shadow: 3px 3px #313131;	
+}
+
+.buttondown {
+	opacity: 1;
+	-webkit-transition: all .5s ease-in 3s;
+	transition: all .5s ease-in 3s;
+	width: 4vw;
+	z-index: 2;
+	-webkit-animation: bounce 2s infinite 2s;
+	animation: bounce 2s infinite 2s;
+	top: 85vh;
+	position: absolute;
+	left: 48vw;
+}
+
+
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+
+
+/* Index ends */
+
+/* Wrapper starts */
+#wrapper {
+	height: 100vh;
+	width: 100%;
+}
+
+
+
+/* Project Table starts */
+
+.project-table {
+    border-collapse: collapse;
+    width: 80%;
+	margin: 16vh auto 5vh;
+	border: 1px solid black;
+	text-align: center;
+	letter-spacing: .024em;
+}
+
+
+td {
+	border: 1px solid black;
+	font-size: 18px;
+	line-height: 1.4;
+	padding: 14px;
+}
+
+.th {
+	border: 1px solid black;	
+	font-size: 20px;
+	color: #fff;
+	line-height: 1.4;
+	text-transform: uppercase;
+	padding: 14px;
+}
+
+.project-table a {
+	text-decoration: none;
+	color: black;
+}
+
+
+/* Project Table Ends*/
+/* Footer starts*/
+.footer {
+	bottom: 0;
+	margin-top: -10vh;
+	height: 10vh;
+	width: 100%;
+	position: relative;
+	z-index: 100000000;
+}
+
+.footer p {
+	padding: 20px;
+	color:#DDDBDB;
+}
+
+/* Footer Ends*/
+/* Wrapper ends */
