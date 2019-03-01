@@ -14,7 +14,7 @@
 	<div class="header">
 		<nav class="nav one">
 			<a href="idrettsklubb.html">HJEM</a>
-			<a href="kalender.php">KALENDER</a>
+			<a href="kalender.html">KALENDER</a>
 			<img src="src/logo.png" alt="Logo" class="logo">
 			<a href="historie.php">HISTORIE</a>
 			<a class="current" href="omOss.php">OM OSS</a>
