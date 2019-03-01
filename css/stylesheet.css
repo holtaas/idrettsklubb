@@ -20,7 +20,7 @@ body {
 
 .nav {
 	display: block;
-	margin: 0 auto;
+	margin: 0 0 0 -2vw;
 	padding: 1.7%;
 	position: fixed;
 	width: 100%;
@@ -49,6 +49,7 @@ nav a {
 	transition:0.2s all ease-in-out;
 	text-decoration: none;
 	padding: 3%;
+	margin: 0 4%;
 	text-align: center;
 	border-bottom:2px solid rgba(0,0,0,0);
 	padding-bottom: 1%;
@@ -68,24 +69,32 @@ nav a {
 	z-index: 100000;
 }
 
+nav {
+	width: 100%;
+	display: inline-flex;
+}
+
 nav a.current {
 	border-bottom:2px solid white;	
 	opacity: 1;
 }
+
+
+
 nav a:hover {
 	transition:0.2s all ease-in-out;
 	border-bottom:2px solid white;	
 	opacity: 1;
 }
 
-#logo {
-	width: 10vw;
+.logo {
+	width: 19vh;
 	margin-bottom: -13vh;
 }
 /* Header ends */
 
 /* Index starts */
-.parallax {
+.index {
 	text-align: center;
 	display: flex;
 	height: 100vh;
@@ -93,67 +102,41 @@ nav a:hover {
 	align-items: center;
 	position: relative;
 	z-index: 10;
-}
-
-/* parallax ulike steder starts*/ 
-.index {
 	background-image: url(../src/stickFighting.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 }
 
-.prosjektnotater {
-	background-image: url(../src/notesimage.jpg);
-	background-size: cover;
-	background-attachment: fixed;
-	font-size: 4vh;
-	text-shadow: 3px 3px #D8D8D8;
-}
-
-.miniprosjekter {
-	background-image: url(../src/miniprosjekter.jpg);
-	background-size: cover;
-	background-attachment: fixed;
-	font-size: 4vh;
-	color: white;
-	text-shadow: 3px 3px #313131;
-}
-
-.omMeg {
-	background-image: url(../src/omMeg.jpg);
-	background-size: cover;
-	background-attachment: fixed;
-	font-size: 4vh;
-	color: white;
-	text-shadow: 3px 3px #313131;
-}
-
-/* parallax ulike steder ends*/ 
-.index h2 {
-	font-size: 6vh;
-	color: white;
-	text-shadow: 3px 3px #313131;	
+.text {
+	width: 100%;
 }
 
 .index h1 {
 	font-size: 8vh;
 	color: white;
-	text-shadow: 3px 3px #313131;	
+	text-shadow: 3px 3px #313131;
+}
+
+.index h2 {
+	font-size: 6vh;
+	color: white;
+	text-shadow: 3px 3px #313131;
 }
 
 .buttondown {
 	opacity: 1;
 	-webkit-transition: all .5s ease-in 3s;
 	transition: all .5s ease-in 3s;
-	width: 9vh;
+	width: 5vw;
 	z-index: 2;
 	-webkit-animation: bounce 2s infinite 2s;
 	animation: bounce 2s infinite 2s;
-	top: 85vh;
-	position: absolute;
-	left: 48vw;
 }
 
+.scroll-down {
+	margin: 40vh auto 0;
+	position: absolute;
+}
 
 @keyframes bounce {
   0%,
@@ -185,44 +168,8 @@ nav a:hover {
 	height: 100vh;
 	width: 100%;
 }
+/* Wrapper ends */
 
-
-
-/* Project Table starts */
-
-.project-table {
-    border-collapse: collapse;
-    width: 80%;
-	margin: 16vh auto 5vh;
-	border: 1px solid black;
-	text-align: center;
-	letter-spacing: .024em;
-}
-
-
-td {
-	border: 1px solid black;
-	font-size: 18px;
-	line-height: 1.4;
-	padding: 14px;
-}
-
-.th {
-	border: 1px solid black;	
-	font-size: 20px;
-	color: #fff;
-	line-height: 1.4;
-	text-transform: uppercase;
-	padding: 14px;
-}
-
-.project-table a {
-	text-decoration: none;
-	color: black;
-}
-
-
-/* Project Table Ends*/
 /* Footer starts*/
 .footer {
 	bottom: 0;
