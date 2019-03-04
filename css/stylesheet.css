@@ -25,7 +25,10 @@ body {
 	position: fixed;
 	width: 100%;
 	box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+	text-align: center;
+	z-index: 1000000;
 }
+
 
 /*forskjellig nav farger start */
 .one {
@@ -59,20 +62,7 @@ nav a {
 }
 
 
-.header {
-	display: block;
-	text-align: center;
-	width: 100%;
-	margin: 0 auto;
-	box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
-	position: relative;
-	z-index: 100000;
-}
 
-nav {
-	width: 100%;
-	display: inline-flex;
-}
 
 nav a.current {
 	border-bottom:2px solid white;	
@@ -164,9 +154,17 @@ nav a:hover {
 /* Index ends */
 
 /* Wrapper starts */
-#wrapper {
+
+#wrapperOne {
 	height: 100vh;
 	width: 100%;
+	
+}
+
+.wrapper {
+	height: 100vh;
+	width: 100%;
+	padding-top: 25vh;	
 }
 
 #calender {
