@@ -167,6 +167,19 @@ nav a:hover {
 	padding-top: 25vh;	
 }
 
+.wrapper p {
+	margin-left: 4vw;
+	margin-right: 4vw;
+	margin-top: 2vh;
+}
+
+.picture1omOss {
+	height: 40vh;
+	width: auto;
+	margin: 4vw;
+	float: left;
+}
+
 #calender {
 	padding-top: 24vh;
 }
