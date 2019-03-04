@@ -192,3 +192,10 @@ nav a:hover {
 
 /* Footer Ends*/
 /* Wrapper ends */
+
+@media screen and (max-width:70vw) {
+	
+	body {
+		back
+	}
+}
