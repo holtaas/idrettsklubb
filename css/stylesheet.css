@@ -170,6 +170,16 @@ nav a:hover {
 	margin: 2vw 2vw 2vw 0;
 }
 
+.News {
+	border: 1px solid black;
+	border-collapse: collapse;
+	float: right;
+}
+
+.News td {
+	border: 2px solid black;
+}
+
 .wrapper {
 	height: 100%;
 	width: 100%;
