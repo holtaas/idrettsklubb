@@ -38,7 +38,7 @@ body {
 }
 
 .nav li {
-	background-color: #575757;
+	background-color:#8E8E8E;
 	padding: 3vh 1vw;
 	width: 70%;
 	text-align: center;
@@ -56,6 +56,6 @@ body {
 .wrapper {
 	width: 71vw;
 	float: right;
-	background-color:#575757;
+	background-color:#8E8E8E;
 	margin: 2vw 2vw 2vw 0;
 }

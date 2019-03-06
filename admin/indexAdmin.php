@@ -18,7 +18,7 @@
 	</div>
 		
 	<div class="wrapper">
-	<h1>Bruksanvisning</h1>
+	<h1>Hjemmeside</h1>
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque accusamus quia eveniet deleniti, quos at ipsam ratione optio, libero aspernatur, quo consequatur minus ex explicabo dolorem temporibus possimus distinctio corporis!</p>
 	</div>
 	
