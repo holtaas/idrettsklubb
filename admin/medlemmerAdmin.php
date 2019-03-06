@@ -20,7 +20,65 @@
 		
 	<div class="wrapper">
 	<h1>Medlemmer</h1>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque accusamus quia eveniet deleniti, quos at ipsam ratione optio, libero aspernatur, quo consequatur minus ex explicabo dolorem temporibus possimus distinctio corporis!</p>
+		
+		<div>
+		<h2 class="headerTwo">Nytt medlem</h2> <br>
+			<table class="tableNewUser">
+			<form method="POST">	
+				<tr><td><div>Fornavn:</div></td></tr>
+				<tr><td><div><input type="text" name="firstname" placeholder="Ola"><br></div></td></tr>
+				<tr><td><div>Etternavn:</div></td></tr>
+				<tr><td><div><input type="text" name="surname" placeholder="Nordmann"><br></div></td></tr>
+				<tr><td><div>Fødselsdato:</div></td></tr>
+				<tr><td><div><input type="text" name="birth" placeholder="2000-01-18"><br></div></td></tr>
+				<tr><td><div>Adresse:</div></td></tr>
+				<tr><td><div><input type="text" name="adress" placeholder="Katteveien 1"><br></div></td></tr>
+				<tr><td><div>Telefon:</div></td></tr>
+				<tr><td><div><input type="text" name="phone" placeholder="98765432"><br></div></td></tr>
+				<tr><td><div>Email:</div></td></tr>
+				<tr><td><div><input type="text" name="email" placeholder="ola.nordmann@gmail.com"><br></div></td></tr>			
+				<tr><td><div>Kontaktperson fornavn:</div></td></tr>
+				<tr><td><div><input type="text" name="firstnameK" placeholder="Kari"><br></div></td></tr>
+				<tr><td><div>Kontaktperson etternavn:</div></td></tr>
+				<tr><td><div><input type="text" name="surnameK" placeholder="Nordmann"><br></div></td></tr>
+				<tr><td><div>Kontaktperson telefon:</div></td></tr>
+				<tr><td><div><input type="text" name="phoneK" placeholder="98765432"><br></div></td></tr>
+				<tr><td><div>Kontaktperson email:</div></td></tr>
+				<tr><td><div><input type="text" name="emailK" placeholder="kari.nordmann@gmail.com"><br></div></td></tr>
+				
+				<tr><td><div><input type="submit" name="leggtil" value="Legg til"></div></td></tr>
+				<tr><td><div><br></div></td></tr>
+			</form>
+			</table>	
+		</div>
+		<?php
+
+		if(isset($_POST["leggtil"]))
+		{
+			include 'connectToDatabase.php';
+
+			$connection->set_charset("utf8");
+			$fornavn = $_POST["firstName"];
+			$etternavn = $_POST["surname"];
+			$hus = $_POST["idHouse"];
+
+
+			$sql = "INSERT INTO students (firstName, surname, idHouse) VALUES ('$fornavn', '$etternavn', '$hus');";
+			if($connection->query($sql))
+			{
+				echo('<div class="addedNew">');
+				echo('<h3 class="headerFour">');
+				echo("Added new student $fornavn $etternavn!");
+				echo('</h3>');
+				echo('</div>');
+
+			}
+			else{
+				echo("Feil i brukerinput: " . mysqli_error($connection));
+			}
+		}
+		?>
+		
 	</div>
 	
 </body>
