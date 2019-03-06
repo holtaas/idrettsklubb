@@ -16,7 +16,7 @@
 			<a href="idrettsklubb.html">HJEM</a>
 			<a href="kalender.html">KALENDER</a>
 			<img src="src/logo.png" alt="Logo" class="logo">
-			<a href="historie.php">HISTORIE</a>
+			<a href="historie.html">HISTORIE</a>
 			<a class="current" href="omOss.php">OM OSS</a>
 		</nav>
 	</div>

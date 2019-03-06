@@ -4,6 +4,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	line-height: 1.6;
 }
 
 html {
@@ -162,22 +163,43 @@ nav a:hover {
 }
 
 .wrapper {
-	height: 100vh;
+	height: 100%;
 	width: 100%;
-	padding-top: 25vh;	
+	padding-top: 25vh;
 }
 
 .wrapper p {
-	margin-left: 4vw;
-	margin-right: 4vw;
+	margin-left: 10vw;
+	margin-right: 10vw;
 	margin-top: 2vh;
 }
 
-.picture1omOss {
+.picture1Historie {
 	height: 40vh;
 	width: auto;
-	margin: 4vw;
+	margin-left: 10vw;
+	margin-right: 4vw;
+	margin-top: 4vh;
+	margin-bottom: 4vh;
 	float: left;
+}
+
+.picture2Historie {
+	height: 40vh;
+	width: auto;
+	margin-left: 4vw;
+	margin-right: 10vw;
+	margin-top: 4vh;
+	margin-bottom: 10vh;
+	float: right;
+}
+
+
+.overskriftHistoire {
+	margin-top: 4vh;
+	margin-bottom: 4vh;
+	margin-left: 10vw;
+	margin-right: 10vw;
 }
 
 #calender {
@@ -189,11 +211,12 @@ nav a:hover {
 /* Footer starts*/
 .footer {
 	bottom: 0;
-	margin-top: -10vh;
+	margin-top: 10vh;
 	height: 10vh;
 	width: 100%;
 	position: relative;
 	z-index: 100000000;
+	clear: both;
 }
 
 .footer p {
