@@ -48,9 +48,40 @@
 			  <tr>
 				<th>Nyheter</th>
 			  </tr>
-			  <tr>
-				<td>Lorum ipsum </td>
-			  </tr>
+				<tr>
+				<?php
+				
+				$server = "elevweb.akershus-fk.no";
+				$user = "aajo2108";
+				$password = "aajo21081234";
+				$database = "aajo2108_idrettslag";
+
+				$connection = new MySQLi($server, $user, $password, $database);
+				if($connection -> connect_error)
+				{
+					die("Connection failed ".$connection->connect_error);
+				}
+				else
+				{
+					//echo("Connection Successfull"); 
+				}
+				$connection->set_charset("utf8");
+					
+					
+				$sql = "SELECT * FROM aajo2108_idrettslag.News order by idNews desc limit 2";
+				$results = $connection->query($sql);
+
+				while($row = $results->fetch_assoc())
+				{
+					$idNews = $row["idNews"];
+					$news = $row["news"];
+					echo("<td>");
+					echo($idNews>$news);
+					echo("</td>");
+				}
+					
+				?>
+				</tr>
 		</table>
 		
 	</div>
