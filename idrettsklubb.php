@@ -2,18 +2,19 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Kalender</title>
+<title>Idrettsklubb</title>
 <link rel="stylesheet" href="css/stylesheet.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="animated-scroll-anchor.js"></script>
 </head>
 	
 <body>
+<div>
 	<!-- Header starts -->	
 	<div class="header">
 		<nav class="nav one">
-			<a href="idrettsklubb.php">HJEM</a>
-			<a class="current" href="kalender.php">KALENDER</a>
+			<a class="current" href="idrettsklubb.php">HJEM</a>
+			<a href="kalender.html">KALENDER</a>
 			<img src="src/logo.png" alt="Logo" class="logo">
 			<a href="historie.php">HISTORIE</a>
 			<a href="omOss.php">OM OSS</a>
@@ -21,9 +22,21 @@
 	</div>
 	<!-- Header ends -->	
 	
+	<!-- Index starts -->
+	<div class="parallax index">
+	<div class="text">
+	<h1>STICK-FIGHTING OSLO</h1>
+	<h2>Eskrima - Arnis - Kali</h2>
+	</div>
+	<a href="#wrapperOne" class="scroll-down"><img src="src/buttondown.png" alt="scroll-down" class="buttondown"></a>
+	<!-- Index ends -->
+	</div>
+	</div>
 	<!-- Wrapper starts -->
-	<div id="calender">
-	<script src="https://calendar.time.ly/embed.js" data-src="https://calendar.time.ly/fpe78x14/" id="timely_script" class="timely-script"></script>
+	<div id="wrapperOne">
+		<iframe class="video" width="500" height="400"
+		src="https://www.youtube.com/embed/4FMBadkqcRI">
+		</iframe>
 	</div>
 	<!-- Wrapper ends -->
 	
