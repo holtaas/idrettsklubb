@@ -162,6 +162,13 @@ nav a:hover {
 	
 }
 
+.video {
+	margin-left: 30vw;
+	margin-right: 20vw;
+	margin-top: 15vh;
+	margin-bottom: 15vh;
+}
+
 .wrapper {
 	height: 100%;
 	width: 100%;
