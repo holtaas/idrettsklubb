@@ -155,15 +155,19 @@ nav a:hover {
 
 #wrapperOne {
 	height: 100vh;
-	width: 100%;
-	
+	width: 85%;
+	margin: 0 auto;
+}
+
+#wrapperOne p{
+	margin-top: 3vh;
 }
 
 .video {
-	margin-left: 30vw;
-	margin-right: 20vw;
-	margin-top: 15vh;
-	margin-bottom: 15vh;
+	width: 35vw;
+	height: 24vw;
+	float: left;
+	margin: 2vw 2vw 2vw 0;
 }
 
 .wrapper {
