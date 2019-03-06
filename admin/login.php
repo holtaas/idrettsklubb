@@ -3,10 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Admin</title>
+<link rel="stylesheet" href="css/admin.css">
 </head>
 
 <body>
-		<table class="table-loginn">
+		<table class="loginTable">
 			<form method="POST">
 				<tr><th>Login</th></tr>
 				<tr><td><div>Brukernavn:</div></td></tr>

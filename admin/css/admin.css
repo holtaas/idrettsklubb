@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* CSS Document */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: gainsboro;
+}
+
+.loginTable {
+	margin: 30vh auto 0;
+	width: 50vw;
+	text-align: center;
+	border: solid 1px black;
+	
+}
+
