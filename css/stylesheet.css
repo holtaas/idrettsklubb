@@ -170,14 +170,23 @@ nav a:hover {
 	margin: 2vw 2vw 2vw 0;
 }
 
+
 .News {
-	border: 1px solid black;
 	border-collapse: collapse;
 	float: right;
+	margin-top: -65vh;
+	background-color: gainsboro;
 }
 
 .News td {
-	border: 2px solid black;
+	border: 1px solid black;
+	padding: 3vh;
+	text-align: left;
+}
+
+.News th {
+	border: 1px solid black;
+	padding: 3vh;
 }
 
 .wrapper {
@@ -224,9 +233,6 @@ nav a:hover {
 	padding-top: 24vh;
 }
 
-.table {
-	
-}
 
 /* Wrapper ends */
 
