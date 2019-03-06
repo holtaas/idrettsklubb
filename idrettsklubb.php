@@ -44,6 +44,7 @@
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut nam, accusantium molestias culpa ducimus optio soluta placeat expedita rerum error cum temporibus dolor omnis ipsam delectus recusandae rem dolorum? Minus.</p>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut nam, accusantium molestias culpa ducimus optio soluta placeat expedita rerum error cum temporibus dolor omnis ipsam delectus recusandae rem dolorum? Minus.</p>
 		
+
 		<table class="News">
 			  <tr>
 				<th>Nyheter</th>
