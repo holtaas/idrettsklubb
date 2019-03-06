@@ -60,7 +60,16 @@ body {
 	margin: 2vw 2vw 2vw 0;
 }
 
+.wrapper p {
+	margin: 2vh;
+}
+
+.wrapper h1 {
+	margin: 2vh;
+}
+
 .imgTimely {
-	width: 20vw;
-	margin: 5vh auto;
+	width: 50vw;
+	height: auto;
+	margin: 2vh;
 }

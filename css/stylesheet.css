@@ -174,12 +174,8 @@ nav a:hover {
 .News {
 	border-collapse: collapse;
 	float: right;
-<<<<<<< HEAD
-	margin-top: -65vh;
 	background-color: gainsboro;
-=======
-	height: 80%;
->>>>>>> 79de727d2a09d3da8de9c143772d06c08809cdb4
+	display: block;
 }
 
 .News td {

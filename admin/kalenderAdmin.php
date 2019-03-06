@@ -19,10 +19,12 @@
 		
 	<div class="wrapper">
 	<h1>Kalender</h1>
-	<p>Til kalender er det brukt en thirdparty-applikasjon som heter Timely. Ved å logge inn på Timely med brukernavn og passord gitt under kan du endre og legge til nye hendelser i kalenderen.</p>
-	<p>Epost: idrettsklubbHA@outlook.com <br>Passord:Stickfighting123
-	</p>
-	<img src="src/Capture.JPG" alt="timely" class="imgTimely">
+	<p>Til kalender er det brukt en thirdparty-applikasjon som heter Timely. Man kommer seg på nettstedet ved å klikke på linken, og logger inn med brukernavn og passord gitt under. Deretter kan du endre og legge til nye hendelser i kalenderen.</p>
+	<p><a href="https://app.time.ly/login">Link til nettstedet</a></p>
+	<p>Epost: idrettsklubbHA@outlook.com</p>
+	<p>Passord: Stickfighting123</p>
+	
+	<img class="imgTimely" src="src/Capture.JPG" alt="timely">
 	</div>
 	
 </body>
