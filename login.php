@@ -13,7 +13,7 @@
 				<tr><td><div><input type="text" name="username" placeholder="  Sett inn brukernavn"><br></div></td></tr>
 				<tr><td><div>Passord:</div></td></tr>
 				<tr><td><div><input type="password" name="password" placeholder="  Sett inn passord"><br></div></td></tr>
-				<tr><td><div><input type="submit" name="login" value="Login"><input class="right" type="button" value="Ny bruker" onclick="window.location.href='nyBruker.php'"></div></td></tr>
+				<tr><td><div><input type="submit" name="login" value="Login"></div></td></tr>
 				
 			</form>
 		</table>
@@ -39,7 +39,7 @@
 			$brukernavn = $_POST["username"];
 			$passord = $_POST["password"];
 
-			$sql = "SELECT username, password FROM persons;";
+			$sql = "SELECT username, password FROM login;";
 			$results = $connection->query($sql);
 			
 			$foundUser = false;
@@ -47,7 +47,7 @@
 			{
 				if($row['username'] == $brukernavn && $row['password'] == $passord)
 				{
-					header("Location: myPage.php");
+					header("Location: admin.php");
 				}				
 			}
 			if($foundUser == false)
