@@ -48,7 +48,6 @@
 			  <tr>
 				<th>Nyheter</th>
 			  </tr>
-				<tr>
 				<?php
 				
 				$server = "elevweb.akershus-fk.no";
@@ -68,20 +67,19 @@
 				$connection->set_charset("utf8");
 					
 					
-				$sql = "SELECT * FROM aajo2108_idrettslag.News order by idNews desc limit 2";
+				$sql = "SELECT * FROM aajo2108_idrettslag.News order by idNews desc limit 5";
 				$results = $connection->query($sql);
 
 				while($row = $results->fetch_assoc())
 				{
-					$idNews = $row["idNews"];
-					$news = $row["news"];
+					echo("<tr>");
 					echo("<td>");
-					echo($idNews>$news);
+					echo($row["news"]);
 					echo("</td>");
+					echo("</tr>");
 				}
 					
 				?>
-				</tr>
 		</table>
 		
 	</div>
