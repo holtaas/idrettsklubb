@@ -18,6 +18,7 @@
 				
 			</form>
 		</table>
+		<div class="successful">
 		<?php
 		if(isset($_POST["login"]))
 		{
@@ -56,6 +57,7 @@
 				echo("Wrong username and or password");
 			}
 		}
-	?>
+		?>
+	</div>
 </body>
 </html>

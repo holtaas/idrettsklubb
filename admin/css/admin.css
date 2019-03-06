@@ -7,6 +7,7 @@
 
 body {
 	background-color: gainsboro;
+	line-height: 1.6;
 }
 
 .loginTable {
@@ -17,3 +18,44 @@ body {
 	
 }
 
+.successful {
+	text-align: center;
+	margin-top: 5vh;
+}
+
+.nav {
+	position: fixed;
+	width: 25vw;
+	height: 100vh;
+	float: left;
+	left: 0;
+	background-color:#31324E;
+}
+
+.nav ul {
+	margin-top: 10vh;
+	list-style-type: none;
+}
+
+.nav li {
+	background-color: #575757;
+	padding: 3vh 1vw;
+	width: 70%;
+	text-align: center;
+	margin: 2vh auto 0;
+	
+}
+
+.nav a {
+	text-decoration: none;
+	font-size: 20px;
+	color: black;
+
+}
+
+.wrapper {
+	width: 71vw;
+	float: right;
+	background-color:#575757;
+	margin: 2vw 2vw 2vw 0;
+}
