@@ -19,7 +19,10 @@
 		
 	<div class="wrapper">
 	<h1>Kalender</h1>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque accusamus quia eveniet deleniti, quos at ipsam ratione optio, libero aspernatur, quo consequatur minus ex explicabo dolorem temporibus possimus distinctio corporis!</p>
+	<p>Til kalender er det brukt en thirdparty-applikasjon som heter Timely. Ved å logge inn på Timely med brukernavn og passord gitt under kan du endre og legge til nye hendelser i kalenderen.</p>
+	<p>Epost: idrettsklubbHA@outlook.com <br>Passord:Stickfighting123
+	</p>
+	<img src="src/Capture.JPG" alt="timely" class="imgTimely">
 	</div>
 	
 </body>
