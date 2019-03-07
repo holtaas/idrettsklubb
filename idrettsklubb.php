@@ -43,7 +43,6 @@
 		src="https://www.youtube.com/embed/4FMBadkqcRI">
 		</iframe>
 				
-
 		<table class="News">
 			  <tr>
 				<th>Nyheter</th>
