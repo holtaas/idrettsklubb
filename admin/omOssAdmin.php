@@ -7,12 +7,13 @@
 </head>
 <body>
 	<div class="nav">
+		<img src="src/admin.png" alt="admin" class="logo">
 		<ul>
-		<li><a href="admin.php">Hjem</a></li>
+		<li><a href="admin.php">Intro</a></li>
 		<li><a href="indexAdmin.php">Hovedside</a></li>
 		<li><a href="kalenderAdmin.php">Kalender</a></li>
 		<li><a href="historieAdmin.php">Historie</a></li>
-		<li><a href="omOssAdmin.php">Om oss</a></li>
+		<li id="current"><a href="omOssAdmin.php">Om oss</a></li>
 		<li><a href="medlemmerAdmin.php">Medlemmer</a></li>
 		</ul>
 	</div>
