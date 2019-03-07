@@ -30,19 +30,41 @@
 				<tr><td><div>Etternavn:</div></td></tr>
 				<tr><td><div><input type="text" name="surname" placeholder="Nordmann"><br></div></td></tr>
 				<tr><td><div>Fødselsdato:</div></td></tr>
-				<tr><td><div><input type="text" name="birth" placeholder="2000-01-18"><br></div></td></tr>
+				<tr><td><div><input type="date" name="birth" placeholder="2000-01-18"><br></div></td></tr>
+				
+				<tr><td><div>Kjønn:</div></td></tr>
+				<tr><td><div>
+				<select name="gender">
+				<option value="0">Kvinne</option>
+				<option value="1">Mann</option>
+				</select>
+				<br></div></td></tr>
+				
+				<tr><td><div>Telefon:</div></td></tr>
+				<tr><td><div><input type="number" name="phone" placeholder="98765432"><br></div></td></tr>
 				<tr><td><div>Adresse:</div></td></tr>
 				<tr><td><div><input type="text" name="adress" placeholder="Katteveien 1"><br></div></td></tr>
 				<tr><td><div>Telefon:</div></td></tr>
 				<tr><td><div><input type="text" name="phone" placeholder="98765432"><br></div></td></tr>
 				<tr><td><div>Email:</div></td></tr>
 				<tr><td><div><input type="text" name="email" placeholder="ola.nordmann@gmail.com"><br></div></td></tr>			
+				<tr><td><div>Første gang aktiv:</div></td></tr>
+				<tr><td><div><input type="number" name="birth" placeholder="2006"><br></div></td></tr>
+				
+				<tr><td><div>Aktiv:</div></td></tr>
+				<tr><td><div>
+				<select name="aktiv">
+				<option value="1">Ja</option>
+				<option value="0">Nei</option>
+				</select>
+				<br></div></td></tr>
+				
 				<tr><td><div>Kontaktperson fornavn:</div></td></tr>
 				<tr><td><div><input type="text" name="firstnameK" placeholder="Kari"><br></div></td></tr>
 				<tr><td><div>Kontaktperson etternavn:</div></td></tr>
 				<tr><td><div><input type="text" name="surnameK" placeholder="Nordmann"><br></div></td></tr>
 				<tr><td><div>Kontaktperson telefon:</div></td></tr>
-				<tr><td><div><input type="text" name="phoneK" placeholder="98765432"><br></div></td></tr>
+				<tr><td><div><input type="number" name="phoneK" placeholder="98765432"><br></div></td></tr>
 				<tr><td><div>Kontaktperson email:</div></td></tr>
 				<tr><td><div><input type="text" name="emailK" placeholder="kari.nordmann@gmail.com"><br></div></td></tr>
 				
@@ -60,6 +82,16 @@
 			$connection->set_charset("utf8");
 			$fornavn = $_POST["firstName"];
 			$etternavn = $_POST["surname"];
+			$hus = $_POST["idHouse"];
+			$hus = $_POST["idHouse"];
+			$hus = $_POST["idHouse"];
+			$hus = $_POST["idHouse"];
+			$hus = $_POST["idHouse"];
+			$hus = $_POST["idHouse"];
+			$hus = $_POST["idHouse"];
+			$hus = $_POST["idHouse"];
+			$hus = $_POST["idHouse"];
+			$hus = $_POST["idHouse"];
 			$hus = $_POST["idHouse"];
 
 
