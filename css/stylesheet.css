@@ -255,9 +255,46 @@ nav a:hover {
 /* Footer Ends*/
 /* Wrapper ends */
 
-@media screen and (max-width:70vw) {
+@media screen and (max-width: 70vw) {
 	
-	body {
-		back
+	body, html {
+		height: 100vh;
+		width: 70vw;
 	}
+	
+	.header {
+		width: 100vw;
+		height: auto;
+		
+	}
+	
+	.logo {
+		height: 25vh;
+		width: auto;
+	}
+	
+	.nav {
+		display: grid;
+		grid-template-columns: 30% 70%;
+		height: 30vh;
+	}
+	
+	.nav a {
+		grid-template-columns: 1fr;
+		list-style-type: none;
+    	padding: 0;
+    	overflow: hidden;
+		background-color: none;
+		height: auto;
+		margin-top: 0;
+	}
+	
+	.index {
+		width: 100vw;
+		height: auto;
+	}
+	
+	
+
+		
 }
