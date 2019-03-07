@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="css/stylesheet.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="animated-scroll-anchor.js"></script>
+<script src="scrolldisappear.js"></script>
 </head>
 	
 <body>

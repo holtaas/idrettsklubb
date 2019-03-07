@@ -11,7 +11,6 @@
 <body>
 <div>
 	<!-- Header starts -->	
-	<div class="header">
 		<nav class="nav one">
 			<a class="current" href="idrettsklubb.php">HJEM</a>
 			<a href="kalender.html">KALENDER</a>
@@ -19,7 +18,7 @@
 			<a href="historie.php">HISTORIE</a>
 			<a href="omOss.php">OM OSS</a>
 		</nav>
-	</div>
+
 	<!-- Header ends -->	
 	
 	<!-- Index starts -->

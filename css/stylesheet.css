@@ -256,11 +256,7 @@ nav a:hover {
 /* Footer Ends*/
 /* Wrapper ends */
 
-@media screen and (max-width: 600px) {
-	
-	body, html {
-		background-color: red;
-	}
+@media screen and (orientation: portrait) {
 	
 	.header {
 		width: 100vw;
@@ -271,8 +267,7 @@ nav a:hover {
 	}
 	
 	.logo {
-		height: 4vh;
-		width: auto;
+		display: none;
 	}
 	
 	.nav {
