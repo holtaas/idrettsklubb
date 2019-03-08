@@ -10,17 +10,17 @@
 		<img src="src/admin.png" alt="admin" class="logo">
 		<ul>
 		<li><a href="admin.php">Intro</a></li>
-		<li><a href="indexAdmin.php">Hovedside</a></li>
+		<li><a href="nyhetsfeedAdmin.php">Nyhetsfeed</a></li>
 		<li><a href="kalenderAdmin.php">Kalender</a></li>
-		<li id="current"><a href="historieAdmin.php">Historie</a></li>
-		<li><a href="omOssAdmin.php">Om oss</a></li>
 		<li><a href="medlemmerAdmin.php">Medlemmer</a></li>
+		<li><a href="nyttMedlemAdmin.php">Nytt medlem</a></li>
+		<li id="current"><a href="aktivAdmin.php">Aktiv</a></li>
 		</ul>
 	</div>
 		
 	<div class="wrapper">
-	<h1>Historie</h1>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque accusamus quia eveniet deleniti, quos at ipsam ratione optio, libero aspernatur, quo consequatur minus ex explicabo dolorem temporibus possimus distinctio corporis!</p>
+	<h1>Aktiv</h1>
+	<p>Her kan du redigere hvem som er aktive medlemmer i klubben.</p>
 	</div>
 	
 </body>

@@ -10,10 +10,9 @@ body {
 	line-height: 1.6;
 }
 
-.logo {
-	width: 28%;
-	margin: 3vh auto 0 36%;
-}
+
+
+/* Login start */
 
 .loginTable {
 	margin: 30vh auto 0;
@@ -26,6 +25,14 @@ body {
 .successful {
 	text-align: center;
 	margin-top: 5vh;
+}
+
+/* Login end */
+
+/* Navigation start */
+.logo {
+	width: 28%;
+	margin: 3vh auto 0 36%;
 }
 
 .nav {
@@ -61,6 +68,9 @@ body {
 	background-color: white;
 }
 
+/* Navigation end */
+
+/* Wrapper start */
 .wrapper {
 	width: 71vw;
 	float: right;
@@ -76,8 +86,21 @@ body {
 	margin: 2vh;
 }
 
+/* Kalender start */
+
 .imgTimely {
 	width: 50vw;
 	height: auto;
 	margin: 2vh;
 }
+/* Kalender end */
+
+
+/* Medlemmer start */
+.medlemmer {
+	margin: 0 auto;
+}
+
+/* Medlemmer end */
+
+/* Wrapper end */

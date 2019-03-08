@@ -10,11 +10,11 @@
 		<img src="src/admin.png" alt="admin" class="logo">
 		<ul>
 		<li><a href="admin.php">Intro</a></li>
-		<li><a href="indexAdmin.php">Hovedside</a></li>
+		<li><a href="nyhetsfeedAdmin.php">Nyhetsfeed</a></li>
 		<li id="current"><a href="kalenderAdmin.php">Kalender</a></li>
-		<li><a href="historieAdmin.php">Historie</a></li>
-		<li><a href="omOssAdmin.php">Om oss</a></li>
 		<li><a href="medlemmerAdmin.php">Medlemmer</a></li>
+		<li><a href="nyttMedlemAdmin.php">Nytt medlem</a></li>
+		<li><a href="aktivAdmin.php">Aktiv</a></li>
 		</ul>
 	</div>
 		

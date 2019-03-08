@@ -10,17 +10,17 @@
 		<img src="src/admin.png" alt="admin" class="logo">
 		<ul>
 		<li><a href="admin.php">Intro</a></li>
-		<li id="current"><a href="indexAdmin.php">Hovedside</a></li>
+		<li id="current"><a href="nyhetsfeedAdmin.php">Nyhetsfeed</a></li>
 		<li><a href="kalenderAdmin.php">Kalender</a></li>
-		<li><a href="historieAdmin.php">Historie</a></li>
-		<li><a href="omOssAdmin.php">Om oss</a></li>
 		<li><a href="medlemmerAdmin.php">Medlemmer</a></li>
+		<li><a href="nyttMedlemAdmin.php">Nytt medlem</a></li>
+		<li><a href="aktivAdmin.php">Aktiv</a></li>
 		</ul>
 	</div>
 		
 	<div class="wrapper">
-	<h1>Hjemmeside</h1>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque accusamus quia eveniet deleniti, quos at ipsam ratione optio, libero aspernatur, quo consequatur minus ex explicabo dolorem temporibus possimus distinctio corporis!</p>
+	<h1>Nyhetsfeed</h1>
+	<p>I boksen under kan du publisere en nyhet! Kun de siste 5 publiserte nyhetene vil bli synelig på hjemmesiden.</p>
 		<table class="loginTable">
 			<form method="POST">
 				<tr><th>Legg til en nyhet!</th></tr>
