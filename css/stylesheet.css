@@ -270,15 +270,10 @@ nav a:hover {
 		display: none;
 	}
 	
-	.nav {
-
-	}
-
 	.nav a {
 		display: list-item;
 		list-style-type: none;
-		font-size: 15px;
-			
+		font-size: 15px;		
 	}
 
 	

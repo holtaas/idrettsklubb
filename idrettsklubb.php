@@ -18,7 +18,7 @@
 			<a href="historie.php">HISTORIE</a>
 			<a href="omOss.php">OM OSS</a>
 		</nav>
-
+	
 	<!-- Header ends -->	
 	
 	<!-- Index starts -->
