@@ -6,20 +6,18 @@
 <link rel="stylesheet" href="css/stylesheet.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="animated-scroll-anchor.js"></script>
+<script src="scrollHide.js"></script>
 </head>
 	
 <body>
-<div>
 	<!-- Header starts -->	
-	<div class="header">
-		<nav class="nav one">
-			<a href="idrettsklubb.php">HJEM</a>
-			<a href="kalender.html">KALENDER</a>
-			<img src="src/logo.png" alt="Logo" class="logo">
-			<a href="historie.php">HISTORIE</a>
-			<a class="current" href="omOss.php">OM OSS</a>
-		</nav>
-	</div>
+	<nav class="nav one">
+		<a href="idrettsklubb.php">HJEM</a>
+		<a href="kalender.html">KALENDER</a>
+		<img src="src/logo.png" alt="Logo" class="logo">
+		<a href="historie.php">HISTORIE</a>
+		<a class="current" href="omOss.php">OM OSS</a>
+	</nav>
 	<!-- Header ends -->	
 	
 	<!-- Wrapper starts -->
