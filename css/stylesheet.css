@@ -174,8 +174,12 @@ nav a:hover {
 .News {
 	border-collapse: collapse;
 	float: right;
-	background-color: gainsboro;
+	background-color: white;
 	display: block;
+	margin-right: -6%;
+	max-width: 15%;
+	
+
 }
 
 .News td {
@@ -183,11 +187,16 @@ nav a:hover {
 	padding: 3vh;
 	text-align: left;
 	overflow: auto;
+	width: 100%;
 }
+
 
 .News th {
 	border: 1px solid black;
 	padding: 3vh;
+	width: 100%;
+	background-color: #3866B8;
+	color: white;
 }
 
 .wrapper {
