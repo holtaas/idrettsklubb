@@ -75,7 +75,7 @@
 			include 'connectToDatabase.php';
 
 			$connection->set_charset("utf8");
-			$fornavn = $_POST["firstName"];
+			$fornavn = $_POST["firstname"];
 			$etternavn = $_POST["surname"];
 			$fodselsdato = $_POST["birth"];
 			$kjonn = $_POST["gender"];
@@ -92,9 +92,7 @@
 
 			$sql = "INSERT INTO contactPerson (firstname, surname, phoneNumber, email) VALUES ('$fornavnK', '$etternavnK', '$telefonK', '$emailK');";
 			if($connection->query($sql))
-			{
-				 
-
+			{ 
 			}
 			else{
 				echo("Feil i brukerinput: " . mysqli_error($connection));
