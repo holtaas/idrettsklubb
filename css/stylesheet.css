@@ -183,8 +183,6 @@ nav a:hover {
 	display: block;
 	margin-right: -6%;
 	max-width: 15%;
-	
-
 }
 
 .News td {
@@ -207,7 +205,7 @@ nav a:hover {
 .wrapper {
 	height: 100%;
 	width: 100%;
-	padding-top: 25vh;
+	padding-top: 20vh;
 }
 
 .wrapper p {
@@ -273,10 +271,6 @@ nav a:hover {
 		width: 100vw;
 	}
 	
-	#wrapperOne {
-		height: 100%;
-	}
-	
 	.logo {
 		display: none;
 	}
@@ -284,8 +278,28 @@ nav a:hover {
 	.nav a {
 		display: list-item;
 		list-style-type: none;
-		font-size: 3em;		
+		font-size: 1em;		
+	}
+	
+	.buttondown {
+	width: 15vw;
 	}
 
-	
+	.index {
+		background-image: url(../src/portrait.jpg);
+	}
+
+	.News {
+		margin-right: 2%;
+		max-width: 60%;
+	}
+
+	#wrapperOne {
+			width: 96%;
+		}
+	.video {
+		width: 90vw;
+		height: 60vw;
+	}
+
 }
