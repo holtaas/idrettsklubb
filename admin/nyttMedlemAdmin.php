@@ -93,14 +93,24 @@
 			$sql = "INSERT INTO contactPerson (firstname, surname, phoneNumber, email) VALUES ('$fornavnK', '$etternavnK', '$telefonK', '$emailK');";
 			if($connection->query($sql))
 			{
-				echo("Lagt inn kontaktperson"); 
+				 
 
 			}
 			else{
 				echo("Feil i brukerinput: " . mysqli_error($connection));
 			}
 			
-			$sql = "INSERT INTO Members (firstname, surname, gender, birth, start, active, email, phoneNumber, adress) VALUES ('$fornavn', '$etternavn', '$kjonn', '$fodselsdato', '$aktivF', '$aktiv', '$email', '$telefon', '$adresse' );";
+			$sql = "SELECT idcontactPerson FROM aajo2108_idrettslag.contactPerson order by idcontactPerson desc limit 1";
+				$results = $connection->query($sql);
+
+				while($row = $results->fetch_assoc())
+				{
+					$idKP=($row["idcontactPerson"]);
+				}
+			
+			
+			
+			$sql = "INSERT INTO Members (firstname, surname, gender, birth, start, active, email, phoneNumber, adress, contactPerson_idcontactPerson) VALUES ('$fornavn', '$etternavn', '$kjonn', '$fodselsdato', '$aktivF', '$aktiv', '$email', '$telefon', '$adresse', '$idKP' );";
 			if($connection->query($sql))
 			{
 				echo('<div class="addedNew">');
