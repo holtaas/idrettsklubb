@@ -62,7 +62,8 @@
 					echo("</td>");
 					
 					echo("<td>");
-					echo($row["gender"]);
+					if (($row["gender"]) == 1) {echo("Male");}	
+					else {echo("Female");}
 					echo("</td>");
 					
 					echo("<td>");
@@ -82,8 +83,10 @@
 					echo("</td>");
 					
 					echo("<td>");
-					echo($row["active"]);
+					if (($row["active"]) == 1) {echo("Ja");}	
+					else {echo("Nei");}
 					echo("</td>");
+					
 
 
 				}

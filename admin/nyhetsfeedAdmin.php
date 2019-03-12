@@ -34,22 +34,7 @@
 		<?php
 		if(isset($_POST["post"]))
 		{
-			$server = "elevweb.akershus-fk.no";
-			$user = "aajo2108";
-			$password = "aajo21081234";
-			$databaseName = "aajo2108_idrettslag";
-
-			$connection = new MySQLi($server, $user, $password, $databaseName);
-			if($connection -> connect_error)
-			{
-				die("Connection failed ".$connection->connect_error);
-			}
-			else
-			{
-				//echo("Connection Successfull<br>");
-			}
-			$connection->set_charset("utf8");
-			
+			include 'connectToDatabase.php';
 			
 			$nyhet = $_POST["nyhet"];
 
