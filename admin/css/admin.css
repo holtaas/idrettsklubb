@@ -78,6 +78,10 @@ body {
 	margin: 2vw 2vw 2vw 0;
 }
 
+#wrapperMedlemmer {
+	overflow-x: auto;
+}
+
 .wrapper p {
 	margin: 2vh;
 }
@@ -101,6 +105,28 @@ body {
 	margin: 0 auto;
 }
 
+.tabellMedlemmer {
+	border-collapse: collapse;
+	background-color: white;
+	display: block;
+}
+
+.tabellMedlemmer td {
+	border: 1px solid black;
+	padding: 3vh;
+	text-align: left;
+	overflow: auto;
+	width: 100%;
+}
+
+
+.tabellMedlemmer th {
+	border: 1px solid black;
+	padding: 3vh;
+	width: 100%;
+	background-color: #3866B8;
+	color: white;
+}
 /* Medlemmer end */
 
 /* Wrapper end */
