@@ -43,7 +43,9 @@
 				<?php
 				include 'connectToDatabase.php';
 		
-				$sql = "SELECT * FROM aajo2108_idrettslag.Members";
+				$sql = "SELECT Members.firstname, Members.surname, Members.birth, Members.gender, Members.phoneNumber, Members.adress, Members.email, Members.start, Members.active, contactPerson.firstnameK, contactPerson.surnameK, Members.phoneNumber, contactPerson.email
+				FROM Members
+				LEFT JOIN contactPerson ON Members.idMembers=contactPerson.idcontactPerson;";
 				$results = $connection->query($sql);
 
 				while($row = $results->fetch_assoc())
@@ -87,21 +89,12 @@
 					else {echo("Nei");}
 					echo("</td>");
 					
-
-
-				}
-			
-		$sql = "SELECT * FROM aajo2108_idrettslag.contactPerson";
-				$results = $connection->query($sql);
-
-				while($row = $results->fetch_assoc())
-				{
 					echo("<td>");
-					echo($row["firstname"]);
+					echo($row["firstnameK"]);
 					echo("</td>");
 					
 					echo("<td>");
-					echo($row["surname"]);
+					echo($row["surnameK"]);
 					echo("</td>");
 					
 					echo("<td>");
@@ -112,7 +105,9 @@
 					echo($row["email"]);
 					echo("</td>");
 					echo("</tr>");
+
 				}
+			
 				?>
 				
 				

@@ -58,6 +58,8 @@
 					echo("<td>");
 					echo($row["phoneNumber"]);
 					echo("</td>");
+					
+					
 												
 					if(isset($_POST["post"]))	{
 						$aktiv = $_POST["aktivJaNei"];
