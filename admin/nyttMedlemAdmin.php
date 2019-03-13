@@ -74,7 +74,6 @@
 		{
 			include 'connectToDatabase.php';
 
-			$connection->set_charset("utf8");
 			$fornavn = $_POST["firstname"];
 			$etternavn = $_POST["surname"];
 			$fodselsdato = $_POST["birth"];
