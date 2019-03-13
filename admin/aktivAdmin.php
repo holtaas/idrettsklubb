@@ -59,15 +59,11 @@
 												
 					if(isset($_POST["post"]))	{
 						$aktiv = $_POST["aktivJaNei"];
-						$sql = "UPDATE Members SET active='$aktiv' WHERE idMembers='$row["idMembers"]'";
+						$sql = "UPDATE Members SET active='$aktiv' WHERE idMembers='$row[idMembers]'";
 						$results = $connection->query($sql);
 						if($connection->query($sql))
 						{
-						echo('<div class="addedNew">');
-						echo('<h2>');
-						echo("Nyheten ble lagt til!");
-						echo("</h2>");
-						echo('</div>');
+
 						}
 						else{
 							echo("Error");
@@ -89,8 +85,6 @@
 					echo("</tr>");
 
 				}
-			
-		
 				?>
 				
 				
