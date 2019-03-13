@@ -39,7 +39,9 @@
 				$results = $connection->query($sql);
 
 				while($row = $results->fetch_assoc())
-				{
+				{	
+					$idMembers = $row["idMembers"];
+					
 					echo("<tr>");
 					echo("<td>");
 					echo($row["firstname"]);
@@ -59,21 +61,21 @@
 												
 					if(isset($_POST["post"]))	{
 						$aktiv = $_POST["aktivJaNei"];
-						$sql = "UPDATE Members SET active='$aktiv' WHERE idMembers='$row[idMembers]'";
+						$sql = "UPDATE Members SET active='$aktiv' WHERE idMembers='$idMembers'";
 						$results = $connection->query($sql);
 						if($connection->query($sql))
 						{
 
 						}
 						else{
-							echo("Error");
+							echo("error");
 						}	
 					}
 				?>
 				<td>
 				<form name="aktivJaNei" method="POST">
-				  <input type="checkbox" name="aktiv" value="1">Aktiv<br>
-				  <input type="checkbox" name="ikkeAktiv" value="0">Ikke aktiv<br>
+				  <input type="radio" name="aktiv" value="1">Aktiv<br>
+				  <input type="radio" name="ikkeAktiv" value="0">Ikke aktiv<br>
 				  <input type="submit" name="post" value="Endre">
 				</form>
 				</td>

@@ -113,17 +113,15 @@ body {
 
 .tabellMedlemmer td {
 	border: 1px solid black;
-	padding: 3vh;
-	text-align: left;
+	padding: 1vh;
+	text-align: center;
 	overflow: auto;
-	width: 100%;
 }
 
 
 .tabellMedlemmer th {
 	border: 1px solid black;
 	padding: 3vh;
-	width: 100%;
 	background-color: #31324E;
 	color: white;
 }
