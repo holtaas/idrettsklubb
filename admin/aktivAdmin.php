@@ -35,6 +35,7 @@
 				<?php
 				include 'connectToDatabase.php';
 		
+			
 				$sql = "SELECT * FROM aajo2108_idrettslag.Members";
 				$results = $connection->query($sql);
 
@@ -58,10 +59,13 @@
 					echo("<td>");
 					echo($row["phoneNumber"]);
 					echo("</td>");
+					
+					
 												
-					if(isset($_POST["post"]))	{
-						$aktiv = $_POST["aktivJaNei"];
-						$sql = "UPDATE Members SET active='$aktiv' WHERE idMembers='$idMembers'";
+					if(isset($_POST["POST"]))	{
+						$aktiv = $_POST["aktiv"];
+						$idMembers = $row["idMembers"];
+						$sql = "UPDATE Members SET active='$aktiv' WHERE idMembers='$idMembers';";
 						$results = $connection->query($sql);
 						if($connection->query($sql))
 						{
@@ -71,15 +75,15 @@
 							echo("error");
 						}	
 					}
+					echo("<td>");
 				?>
-				<td>
 				<form name="aktivJaNei" method="POST">
 				  <input type="radio" name="aktiv" value="1">Aktiv<br>
-				  <input type="radio" name="ikkeAktiv" value="0">Ikke aktiv<br>
-				  <input type="submit" name="post" value="Endre">
+				  <input type="radio" name="aktiv" value="0">Ikke aktiv<br>
+				  <input type="submit" name="POST" value="Endre">
 				</form>
-				</td>
 				<?php	
+					echo("</td>");
 					echo("<td>");
 					if (($row["active"]) == 1) {echo("Ja");}	
 					else {echo("Nei");}
