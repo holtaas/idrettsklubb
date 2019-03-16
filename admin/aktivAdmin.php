@@ -14,12 +14,12 @@
 		<li><a href="kalenderAdmin.php">Kalender</a></li>
 		<li><a href="medlemmerAdmin.php">Medlemmer</a></li>
 		<li><a href="nyttMedlemAdmin.php">Nytt medlem</a></li>
-		<li id="current"><a href="aktivAdmin.php">Aktiv</a></li>
+		<li id="current"><a href="aktivAdmin.php">Aktiv/Slett</a></li>
 		</ul>
 	</div>
 		
 	<div class="wrapper">
-	<h1>Aktiv</h1>
+	<h1>Aktiv/Slett</h1>
 	<p>Her kan du redigere hvem som er aktive medlemmer i klubben.</p>
 		<table class="tabellMedlemmer">
 				
@@ -30,6 +30,7 @@
 				<th>Telefon</th>
 				<th>Aktiv</th>
 				<th>Aktiv</th>
+				<th>Slett</th>
 				
 				</tr>
 				<?php
@@ -88,9 +89,33 @@
 					if (($row["active"]) == 1) {echo("Ja");}	
 					else {echo("Nei");}
 					echo("</td>");
-					echo("</tr>");
+					
+					echo"<td>";
+					echo"<form method='post'>";
+					echo"<input type='hidden' name='slett_id' value='$idMembers'>";
+					echo"<input type='submit' value='Slett' onClick='return confirm('Er du sikker på at du vil slette?')'>";
+					echo"</td>";
+					
+					echo"</tr>";
+				}
+				if(isset($_POST["slett_id"])) {
+				$slett_id = $_POST["slett_id"];
+					include 'connectToDatabase.php';
+				}	else {
+					die("Du må angi et blad.");
+				}
+
+				$sql = "DELETE FROM Members WHERE idMembers='$slett_id'";
+
+				$results = $connection->query($sql);
+
+				if($connection->query($sql)){
 
 				}
+				else{
+					echo("error");
+				}
+			
 				?>
 				
 				

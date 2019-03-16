@@ -14,7 +14,7 @@
 		<li><a href="kalenderAdmin.php">Kalender</a></li>
 		<li id="current"><a href="medlemmerAdmin.php">Medlemmer</a></li>
 		<li><a href="nyttMedlemAdmin.php">Nytt medlem</a></li>
-		<li><a href="aktivAdmin.php">Aktiv</a></li>
+		<li><a href="aktivAdmin.php">Aktiv/Slett</a></li>
 		</ul>
 	</div>
 		
@@ -22,7 +22,7 @@
 	<h1>Medlemmer</h1>
 	<p>Her får du en oversikt over alle medlemmene i klubben!</p>
 	
-	<table class="tabellMedlemmer" id="wrapperMedlemmer">
+	<table class="tabellMedlemmer">
 				
 				<tr>
 				<th>Fornavn</th>
