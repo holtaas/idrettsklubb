@@ -78,9 +78,6 @@ body {
 	margin: 2vw 2vw 2vw 0;
 }
 
-#wrapperMedlemmer {
-	overflow-x: auto;
-}
 
 .wrapper p {
 	margin: 2vh;
@@ -101,14 +98,12 @@ body {
 
 
 /* Medlemmer start */
-.medlemmer {
-	margin: 0 auto;
-}
-
 .tabellMedlemmer {
 	border-collapse: collapse;
 	background-color: white;
 	display: block;
+	overflow-x: auto;
+	padding: 3%;
 }
 
 .tabellMedlemmer td {
@@ -127,4 +122,18 @@ body {
 }
 /* Medlemmer end */
 
+/* Nytt medlem start */
+.tablelDiv {
+	width: 100%;
+}
+
+#nyttMedlemtableOne {
+	float: left;
+	padding: 3%;
+	margin: 0 0 0 15%;
+}
+#nyttMedlemtableTwo {
+	padding: 3%;
+}
+/* Nytt medlem end */
 /* Wrapper end */

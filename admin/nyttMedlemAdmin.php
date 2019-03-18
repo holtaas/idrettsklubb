@@ -14,14 +14,14 @@
 		<li><a href="kalenderAdmin.php">Kalender</a></li>
 		<li><a href="medlemmerAdmin.php">Medlemmer</a></li>
 		<li id="current"><a href="nyttMedlemAdmin.php">Nytt medlem</a></li>
-		<li><a href="aktivAdmin.php">Aktiv</a></li>
+		<li><a href="aktivAdmin.php">Aktiv/Slett</a></li>
 		</ul>
 	</div>
 		
-	<div class="wrapper medlemmer">
+	<div class="wrapper">
 	<h1>Nytt medlem</h1>
 		<p>Her kan du legge til nye medlemmer til klubben!</p>
-			<table>
+			<table id="nyttMedlemtableOne">
 			<form method="POST">	
 				<tr><td><div>Fornavn:</div></td></tr>
 				<tr><td><div><input type="text" name="firstname" placeholder="Ola"></div></td></tr>
@@ -44,9 +44,12 @@
 				<tr><td><div><input type="text" name="adress" placeholder="Katteveien 1"><br></div></td></tr>
 				<tr><td><div>Email:</div></td></tr>
 				<tr><td><div><input type="text" name="email" placeholder="ola.nordmann@gmail.com"><br></div></td></tr>			
+			
+				</table>
+				
+				<table id="nyttMedlemtableTwo" style="margin: 0 auto;">
 				<tr><td><div>Første gang aktiv:</div></td></tr>
 				<tr><td><div><input type="number" name="aktivF" placeholder="2006"><br></div></td></tr>
-				
 				<tr><td><div>Aktiv:</div></td></tr>
 				<tr><td><div>
 				<select name="aktiv">
@@ -68,6 +71,7 @@
 				<tr><td><div><br></div></td></tr>
 			</form>
 			</table>	
+
 		<?php
 
 		if(isset($_POST["leggtil"]))
