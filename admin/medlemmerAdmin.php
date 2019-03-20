@@ -45,14 +45,19 @@
 				include 'connectToDatabase.php';
 		
 				$sql = "SELECT firstname, surname, birth, gender, phoneNumber, adress, email, start, active, firstnameK, surnameK, phoneNumberK, emailK, name 
-				FROM Members 
-				JOIN contactPerson
-				ON Members.idMembers = contactPerson.idcontactPerson 
-				JOIN Graduation 
-				ON Members.idMembers = Graduation.idMembers 
-				JOIN BeltDegree 
-				ON Graduation.idMembers = BeltDegree.idBeltDegree";
-				$results = $connection->query($sql);
+				FROM contactPerson
+				JOIN Members
+				ON contactPerson.idcontactPerson = Members.idMembers";
+				
+					if($results = $connection->query($sql))
+					{
+						
+					}
+					else
+					{
+						echo("Feil i brukerinput: " . mysqli_error($connection));
+					}
+
 
 				while($row = $results->fetch_assoc())
 				{
@@ -68,12 +73,12 @@
 					$start = $row['start'];
 					$aktiv = $row['active'];
 
-					$fornavnK = $row['firstname'];
-					$etternavnK = $row['surname'];
+					$fornavnK = $row['firstnameK'];
+					$etternavnK = $row['surnameK'];
 					$telefonK = $row['phoneNumberK'];
 					$emailK = $row['emailK'];
 					
-					$beltegrad = $row['navn'];
+					$beltegrad = $row['name'];
 					
 					echo("<tr>");
 					echo("<td>");
