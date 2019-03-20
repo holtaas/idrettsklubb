@@ -79,70 +79,32 @@
 					$beltegrad = $row['name'];
 					$graderingsdato = $row['graduationDate'];
 					
-					echo("<tr>");
-					echo("<td>");
-					echo($fornavn);
-					echo("</td>");
-					
-					echo("<td>");
-					echo($etternavn);
-					echo("</td>");
-					
-					echo("<td>");
-					echo($birth);
-					echo("</td>");
-					
-					echo("<td>");
+					echo("
+					<tr>
+					<td>$fornavn</td>
+					<td>$etternavn</td>
+					<td>$birth</td>
+					<td>");
 					if (($gender) == 1) {echo("Male");}	
 					else {echo("Female");}
-					echo("</td>");
-					
-					echo("<td>");
-					echo($telefon);
-					echo("</td>");
-									
-					echo("<td>");
-					echo($adress);
-					echo("</td>");
-										
-					echo("<td>");
-					echo($email);
-					echo("</td>");
-					
-					echo("<td>");
-					echo($start);
-					echo("</td>");
-					
-					echo("<td>");
+					echo("
+					</td>
+					<td>$telefon</td>			
+					<td>$adress</td>				
+					<td>$email</td>
+					<td>$start</td>
+					<td>");
 					if (($aktiv) == 1) {echo("Ja");}	
 					else {echo("Nei");}
-					echo("</td>");
-					
-					echo("<td>");
-					echo($fornavnK);
-					echo("</td>");
-					
-					echo("<td>");
-					echo($etternavnK);
-					echo("</td>");
-					
-					echo("<td>");
-					echo($telefonK);
-					echo("</td>");
-					
-					echo("<td>");
-					echo($emailK);
-					echo("</td>");
-					
-					echo("<td>");
-					echo($beltegrad);
-					echo("</td>");
-					
-					echo("<td>");
-					echo($graderingsdato);
-					echo("</td>");
-					echo("</tr>");
-
+					echo("
+					</td>
+					<td>$fornavnK</td>
+					<td>$etternavnK)</td>
+					<td>$telefonK</td>
+					<td>$emailK</td>
+					<td>$beltegrad)</td>
+					<td>$graderingsdato</td>
+					</tr>");
 				}
 			
 				?>
