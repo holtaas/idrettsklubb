@@ -24,9 +24,9 @@
 			<table id="nyttMedlemtableOne">
 			<form method="POST">	
 				<tr><td><div>Fornavn:</div></td></tr>
-				<tr><td><div><input type="text" name="firstname" placeholder="Ola"></div></td></tr>
+				<tr><td><div><input type="text" name="fornavn" placeholder="Ola"></div></td></tr>
 				<tr><td><div>Etternavn:</div></td></tr>
-				<tr><td><div><input type="text" name="surname" placeholder="Nordmann"></div></td></tr>
+				<tr><td><div><input type="text" name="etternavn" placeholder="Nordmann"></div></td></tr>
 				<tr><td><div>Fødselsdato:</div></td></tr>
 				<tr><td><div><input type="date" name="birth" placeholder="2000-01-18"><br></div></td></tr>
 				
@@ -78,8 +78,8 @@
 		{
 			include 'connectToDatabase.php';
 
-			$fornavn = $_POST["firstname"];
-			$etternavn = $_POST["surname"];
+			$fornavn = $_POST["fornavn"];
+			$etternavn = $_POST["etternavn"];
 			$fodselsdato = $_POST["birth"];
 			$kjonn = $_POST["gender"];
 			$telefon = $_POST["phone"];
@@ -93,7 +93,7 @@
 			$emailK = $_POST["emailK"];
 
 
-			$sql = "INSERT INTO contactPerson (firstname, surname, phoneNumber, email) VALUES ('$fornavnK', '$etternavnK', '$telefonK', '$emailK');";
+			$sql = "INSERT INTO contactPerson (firstnameK, surnameK, phoneNumberK, emailK) VALUES ('$fornavnK', '$etternavnK', '$telefonK', '$emailK');";
 			if($connection->query($sql))
 			{ 
 			}
@@ -101,7 +101,7 @@
 				echo("Feil i brukerinput: " . mysqli_error($connection));
 			}
 			
-			$sql = "SELECT idcontactPerson FROM aajo2108_idrettslag.contactPerson order by idcontactPerson desc limit 1";
+			$sql = "SELECT idcontactPerson FROM contactPerson order by idcontactPerson desc limit 1";
 				$results = $connection->query($sql);
 
 				while($row = $results->fetch_assoc())
