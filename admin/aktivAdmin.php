@@ -62,32 +62,24 @@
 					
 					echo"
 					<td><a href='update.php?idMembers=$idMembers'>Update</td>
-					
-					<td><form method='post'>
-					<input type='hidden' name='slett_id' value='$idMembers'>
-					<input type='submit' value='Slett' onClick='return confirm('Er du sikker på at du vil slette?')'>
-					</td>
+					<td><form method='POST' action=''><button name='ID' method='POST' type='submit' value='$idMembers'>Slett</button></form></td>
 					</tr>";
 				}
 				
-				if(isset($_POST["slett_id"])) {
-				$slett_id = $_POST["slett_id"];
-					include 'connectToDatabase.php';
-				}	else {
-					die("Du må angi et blad.");
-				}
+			if(isset($_POST["ID"])) 
+			{
+				$slette = $_POST["ID"];
+				$sql = "DELETE FROM Members WHERE idMembers='$slette'";
+				if ($connection->query($sql) === TRUE) 
+				{ 
+					echo ("Record was deleted successfully"); 
+				}  
+				else
+				{ 
+					echo("Feil i spørring: " . mysqli_error($connection)); 
+				} 
 
-				$sql = "DELETE FROM Members WHERE idMembers='$slett_id'";
-
-				$results = $connection->query($sql);
-
-				if($connection->query($sql)){
-
-				}
-				else{
-					echo("error");
-				}
-			
+			}
 				?>
 				
 				

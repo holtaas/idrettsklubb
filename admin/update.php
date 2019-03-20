@@ -49,26 +49,45 @@ include 'connectToDatabase.php';
 				Telefon:<br>
 				<input type='number' name='phoneNumber' value='$telfon'><br>
 				Aktiv:<br>
-				<input type='radio' name='aktiv' value='$aktiv'><br>
+				");
+			if($aktiv==1) {
+				echo("
+				<select name='active'>
+				<option selected value='1'>Aktiv</option>
+				<option value='0'>Ikke aktiv</option>
+				</select><br>
+				");
+			} else {
+				echo("
+				<select name='active'>
+				<option value='1'>Aktiv</option>
+				<option selected value='0'>Ikke aktiv</option>
+				</select><br>
+				");
+			}
+		
 				
-				<input type='submit' name='Oppdater' value='Oppdater'>
+				
+			echo("<input type='submit' name='Oppdater' value='Oppdater'>
 			</form>
-		");
+			");
 	}
 	
 	if(isset($_POST["Oppdater"]))
 	{
-		$fornavn = $_POST["fornavn"];
-		$etternavn = $_POST["etternavn"];
-		$fAAr = $_POST["født"];
+		$fornavn = $_POST["firstname"];
+		$etternavn = $_POST["surname"];
+		$birth = $_POST["birth"];
+		$telefon = $_POST["phoneNumber"];
+		$aktiv = $_POST["active"];
 		
-		$sql = "UPDATE Medlem
-				SET fornavn = '$fornavn', etternavn = '$etternavn', født = '$fAAr'
-				WHERE ID_medlem = $ID_medlem;";
+		$sql = "UPDATE Members
+				SET firstname = '$fornavn', surname = '$etternavn', birth = '$birth',  phoneNumber = '$telefon',  active = '$aktiv'
+				WHERE idMembers = $idMembers;";
 
 			if($connection->query($sql))
 			{
-				header('Location: updateDelete.php'); 
+				header('Location: aktivAdmin.php'); 
 
 			}
 			else{
