@@ -39,12 +39,13 @@
 				<th>Kontaktperson telefon</th>
 				<th>Kontaktperson email</th>
 				<th>Beltegrad</th>
+				<th>Graderingsdato</th>
 				
 				</tr>
 				<?php
 				include 'connectToDatabase.php';
 		
-				$sql = "SELECT firstname, Members.surname, Members.birth, Members.gender, Members.phoneNumber, Members.adress, Members.email, Members.start, Members.active, contactPerson.firstnameK, contactPerson.surnameK, contactPerson.phoneNumberK, contactPerson.emailK, BeltDegree.name FROM contactPerson LEFT JOIN Members ON contactPerson.idcontactPerson = Members.contactPerson_idcontactPerson LEFT JOIN Graduation ON Members.idMembers = Graduation.idMembers LEFT JOIN BeltDegree ON Graduation.idBeltDegree = BeltDegree.idBeltDegree";
+				$sql = "SELECT firstname, Members.surname, Members.birth, Members.gender, Members.phoneNumber, Members.adress, Members.email, Members.start, Members.active, contactPerson.firstnameK, contactPerson.surnameK, contactPerson.phoneNumberK, contactPerson.emailK, BeltDegree.name, Graduation.graduationDate FROM contactPerson LEFT JOIN Members ON contactPerson.idcontactPerson = Members.contactPerson_idcontactPerson LEFT JOIN Graduation ON Members.idMembers = Graduation.idMembers LEFT JOIN BeltDegree ON Graduation.idBeltDegree = BeltDegree.idBeltDegree";
 				
 					if($results = $connection->query($sql))
 					{
@@ -76,6 +77,7 @@
 					$emailK = $row['emailK'];
 					
 					$beltegrad = $row['name'];
+					$graderingsdato = $row['graduationDate'];
 					
 					echo("<tr>");
 					echo("<td>");
@@ -134,6 +136,10 @@
 					
 					echo("<td>");
 					echo($beltegrad);
+					echo("</td>");
+					
+					echo("<td>");
+					echo($graderingsdato);
 					echo("</td>");
 					echo("</tr>");
 

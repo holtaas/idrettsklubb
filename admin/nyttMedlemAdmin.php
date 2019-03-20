@@ -43,11 +43,28 @@
 				<tr><td><div>Adresse:</div></td></tr>
 				<tr><td><div><input type="text" name="adress" placeholder="Katteveien 1"><br></div></td></tr>
 				<tr><td><div>Email:</div></td></tr>
-				<tr><td><div><input type="text" name="email" placeholder="ola.nordmann@gmail.com"><br></div></td></tr>			
-			
+				<tr><td><div><input type="text" name="email" placeholder="ola.nordmann@gmail.com"><br></div></td></tr>	
+				<tr><td><div>Beltegrad:</div></td></tr>
+				<tr><td><div>
+				<?php
+				include 'connectToDatabase.php';
+				$sql = "SELECT * FROM BeltDegree";
+				$result = $connection->query($sql);
+				echo "<select name='idBeltDegree'>";
+				while($row = $result->fetch_assoc()) {
+					$idBeltDegree = $row["idBeltDegree"];
+					$name = $row["name"];
+					
+					echo "<option value=$idBeltDegree>$name</option>";
+				}
+				echo "</select>";
+				?>
+				<br></div></td></tr>
 				</table>
 				
 				<table id="nyttMedlemtableTwo" style="margin: 0 auto;">
+				<tr><td><div>Graderingsdato:</div></td></tr>
+				<tr><td><div><input type="date" name="graduationDate" placeholder="2000-01-18"><br></div></td></tr>
 				<tr><td><div>Første gang aktiv:</div></td></tr>
 				<tr><td><div><input type="number" name="aktivF" placeholder="2006"><br></div></td></tr>
 				<tr><td><div>Aktiv:</div></td></tr>
@@ -91,6 +108,8 @@
 			$etternavnK = $_POST["surnameK"];
 			$telefonK = $_POST["phoneK"];
 			$emailK = $_POST["emailK"];
+			$idBeltDegree = $_POST["idBeltDegree"];
+			$graduationDate = $_POST["graduationDate"];
 
 
 			$sql = "INSERT INTO contactPerson (firstnameK, surnameK, phoneNumberK, emailK) VALUES ('$fornavnK', '$etternavnK', '$telefonK', '$emailK');";
@@ -114,12 +133,29 @@
 			$sql = "INSERT INTO Members (firstname, surname, gender, birth, start, active, email, phoneNumber, adress, contactPerson_idcontactPerson) VALUES ('$fornavn', '$etternavn', '$kjonn', '$fodselsdato', '$aktivF', '$aktiv', '$email', '$telefon', '$adresse', '$idKP' );";
 			if($connection->query($sql))
 			{
+				
+
+			}
+			else{
+				echo("Feil i brukerinput: " . mysqli_error($connection));
+			}
+			
+			$sql = "SELECT idMembers FROM Members order by idMembers desc limit 1";
+				$results = $connection->query($sql);
+
+				while($row = $results->fetch_assoc())
+				{
+					$idMembers=($row["idMembers"]);
+				}
+			
+			$sql = "INSERT INTO Graduation (idMembers, idBeltDegree, graduationDate) VALUES ('$idMembers', '$idBeltDegree', '$graduationDate');";
+			if($connection->query($sql))
+			{
 				echo('<div class="addedNew">');
 				echo('<h3 class="headerFour">');
 				echo("La til nytt medlem: $fornavn $etternavn!");
 				echo('</h3>');
 				echo('</div>');
-
 			}
 			else{
 				echo("Feil i brukerinput: " . mysqli_error($connection));
