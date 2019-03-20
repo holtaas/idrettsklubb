@@ -62,6 +62,7 @@
 					
 					echo"
 					<td><a href='update.php?idMembers=$idMembers'>Update</td>
+					
 					<td><form method='post'>
 					<input type='hidden' name='slett_id' value='$idMembers'>
 					<input type='submit' value='Slett' onClick='return confirm('Er du sikker på at du vil slette?')'>
