@@ -44,10 +44,7 @@
 				<?php
 				include 'connectToDatabase.php';
 		
-				$sql = "SELECT firstname, surname, birth, gender, phoneNumber, adress, email, start, active, firstnameK, surnameK, phoneNumberK, emailK, name 
-				FROM contactPerson
-				JOIN Members
-				ON contactPerson.idcontactPerson = Members.idMembers";
+				$sql = "SELECT firstname, Members.surname, Members.birth, Members.gender, Members.phoneNumber, Members.adress, Members.email, Members.start, Members.active, contactPerson.firstnameK, contactPerson.surnameK, contactPerson.phoneNumberK, contactPerson.emailK, BeltDegree.name FROM contactPerson LEFT JOIN Members ON contactPerson.idcontactPerson = Members.contactPerson_idcontactPerson LEFT JOIN Graduation ON Members.idMembers = Graduation.idMembers LEFT JOIN BeltDegree ON Graduation.idBeltDegree = BeltDegree.idBeltDegree";
 				
 					if($results = $connection->query($sql))
 					{
@@ -94,7 +91,7 @@
 					echo("</td>");
 					
 					echo("<td>");
-					if (($gender["gender"]) == 1) {echo("Male");}	
+					if (($gender) == 1) {echo("Male");}	
 					else {echo("Female");}
 					echo("</td>");
 					
@@ -115,7 +112,7 @@
 					echo("</td>");
 					
 					echo("<td>");
-					if (($aktiv["aktiv"]) == 1) {echo("Ja");}	
+					if (($aktiv) == 1) {echo("Ja");}	
 					else {echo("Nei");}
 					echo("</td>");
 					
