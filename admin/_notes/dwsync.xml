@@ -1,1 +1,21 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8" ?><dwsync><file name="login.php" server="elevweb.akershus-fk.no/www_docs/" local="3634783246" remote="3635915580" Dst="1" /><file name="admin.php" server="elevweb.akershus-fk.no/www_docs/" local="3635758564" remote="3635915591" Dst="1" /><file name="medlemmerAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="3635930230" remote="3635930229" Dst="1" /><file name="kalenderAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="3635758564" remote="3635918456" Dst="1" /><file name=".DS_Store" server="elevweb.akershus-fk.no/www_docs/" local="131963445312869500" remote="131963646090000000" Dst="1" /><file name="connectToDatabase.php" server="elevweb.akershus-fk.no/www_docs/" local="3634783246" remote="3634784694" Dst="1" /><file name="aktivAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="3635919611" remote="3635919609" Dst="-1" /><file name="nyttMedlemAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="3635930025" remote="3635930024" Dst="-1" /><file name="nyhetsfeedAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="3635758564" remote="3635758640" Dst="-1" /><file name="update.php" server="elevweb.akershus-fk.no/www_docs/" local="3635928231" remote="3635928230" Dst="-1" /></dwsync>
+=======
+<<<<<<< HEAD
+<?xml version="1.0" encoding="utf-8" ?><dwsync><file name="login.php" server="elevweb.akershus-fk.no/www_docs/" local="3634783246" remote="3635915580" Dst="1" /><file name="admin.php" server="elevweb.akershus-fk.no/www_docs/" local="3635758564" remote="3635915591" Dst="1" /><file name="medlemmerAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="3635918255" remote="3635918254" Dst="1" /><file name="kalenderAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="3635758564" remote="3635918456" Dst="1" /><file name=".DS_Store" server="elevweb.akershus-fk.no/www_docs/" local="131963445312869500" remote="131963646090000000" Dst="1" /><file name="connectToDatabase.php" server="elevweb.akershus-fk.no/www_docs/" local="3634783246" remote="3634784694" Dst="1" /><file name="aktivAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="3635919611" remote="3635919609" Dst="-1" /><file name="nyttMedlemAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="3635927049" remote="3635927048" Dst="-1" /><file name="nyhetsfeedAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="3635758564" remote="3635758640" Dst="-1" /><file name="update.php" server="elevweb.akershus-fk.no/www_docs/" local="3635928231" remote="3635928230" Dst="-1" /></dwsync>
+=======
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="login.php" server="elevweb.akershus-fk.no/www_docs/" local="131963730961587461" remote="131963730930000000" Dst="1" />
+<file name="admin.php" server="elevweb.akershus-fk.no/www_docs/" local="3635144939" remote="3635313106" Dst="1" />
+<file name="medlemmerAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="131975550592763964" remote="131975550620000000" Dst="1" />
+<file name="kalenderAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="131963719055243561" remote="131963719020000000" Dst="1" />
+<file name=".DS_Store" server="elevweb.akershus-fk.no/www_docs/" local="131963445312869500" remote="131963646090000000" Dst="1" />
+<file name="connectToDatabase.php" server="elevweb.akershus-fk.no/www_docs/" local="131963727943897358" remote="131975450700000000" Dst="1" />
+<file name="aktivAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="131975458899161496" remote="131975458790000000" Dst="1" />
+<file name="nyttMedlemAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="3635429164" remote="3635429224" Dst="-1" />
+<file name="nyhetsfeedAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="131972202239643730" remote="131972202170000000" Dst="1" />
+<file name="update.php" server="elevweb.akershus-fk.no/www_docs/" local="131975462319662258" remote="131975462210000000" Dst="1" />
+</dwsync>
+>>>>>>> febe908a0ec182400b57f855c75ca8542dbdfb54
+>>>>>>> 6a2a14a8bd98d3809b79a301867cb77d754fe705
