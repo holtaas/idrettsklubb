@@ -47,72 +47,91 @@
 				$sql = "SELECT firstname, surname, birth, gender, phoneNumber, adress, email, start, active, firstnameK, surnameK, phoneNumberK, emailK, name 
 				FROM Members 
 				JOIN contactPerson
-				ON Members.idMembers=contactPerson.idcontactPerson 
+				ON Members.idMembers = contactPerson.idcontactPerson 
 				JOIN Graduation 
-				ON Members.idMembers= Graduation.idMembers 
+				ON Members.idMembers = Graduation.idMembers 
 				JOIN BeltDegree 
-				ON Graduation.idMembers= BeltDegree.idBeltDegree";
+				ON Graduation.idMembers = BeltDegree.idBeltDegree";
 				$results = $connection->query($sql);
 
 				while($row = $results->fetch_assoc())
 				{
+					
+					$idMembers = $row['idMembers'];
+					$fornavn = $row['firstname'];
+					$etternavn = $row['surname'];
+					$birth = $row['birth'];
+					$gender = $row['gender'];
+					$telefon = $row['phoneNumber'];
+					$adress = $row['adress'];
+					$email = $row['email'];
+					$start = $row['start'];
+					$aktiv = $row['active'];
+
+					$fornavnK = $row['firstname'];
+					$etternavnK = $row['surname'];
+					$telefonK = $row['phoneNumberK'];
+					$emailK = $row['emailK'];
+					
+					$beltegrad = $row['navn'];
+					
 					echo("<tr>");
 					echo("<td>");
-					echo($row["firstname"]);
+					echo($fornavn);
 					echo("</td>");
 					
 					echo("<td>");
-					echo($row["surname"]);
+					echo($etternavn);
 					echo("</td>");
 					
 					echo("<td>");
-					echo($row["birth"]);
+					echo($birth);
 					echo("</td>");
 					
 					echo("<td>");
-					if (($row["gender"]) == 1) {echo("Male");}	
+					if (($gender["gender"]) == 1) {echo("Male");}	
 					else {echo("Female");}
 					echo("</td>");
 					
 					echo("<td>");
-					echo($row["phoneNumber"]);
+					echo($telefon);
 					echo("</td>");
 									
 					echo("<td>");
-					echo($row["adress"]);
+					echo($adress);
 					echo("</td>");
 										
 					echo("<td>");
-					echo($row["email"]);
+					echo($email);
 					echo("</td>");
 					
 					echo("<td>");
-					echo($row["start"]);
+					echo($start);
 					echo("</td>");
 					
 					echo("<td>");
-					if (($row["active"]) == 1) {echo("Ja");}	
+					if (($aktiv["aktiv"]) == 1) {echo("Ja");}	
 					else {echo("Nei");}
 					echo("</td>");
 					
 					echo("<td>");
-					echo($row["firstnameK"]);
+					echo($fornavnK);
 					echo("</td>");
 					
 					echo("<td>");
-					echo($row["surnameK"]);
+					echo($etternavnK);
 					echo("</td>");
 					
 					echo("<td>");
-					echo($row["phoneNumberK"]);
+					echo($telefonK);
 					echo("</td>");
 					
 					echo("<td>");
-					echo($row["emailK"]);
+					echo($emailK);
 					echo("</td>");
 					
 					echo("<td>");
-					echo($row["name"]);
+					echo($beltegrad);
 					echo("</td>");
 					echo("</tr>");
 
