@@ -29,7 +29,7 @@
 				<th>Fødselsdato</th>
 				<th>Telefon</th>
 				<th>Aktiv</th>
-				<th>Aktiv</th>
+				<th>Rediger</th>
 				<th>Slett</th>
 				
 				</tr>
@@ -37,67 +37,38 @@
 				include 'connectToDatabase.php';
 		
 			
-				$sql = "SELECT * FROM aajo2108_idrettslag.Members";
+				$sql = "SELECT * FROM Members";
 				$results = $connection->query($sql);
 
 				while($row = $results->fetch_assoc())
 				{	
 					$idMembers = $row["idMembers"];
+					$fornavn = $row["firstname"];
+					$etternavn = $row["surname"];
+					$birth = $row["birth"];
+					$telefon = $row["phoneNumber"];
+					$aktiv = $row["active"];
 					
-					echo("<tr>");
-					echo("<td>");
-					echo($row["firstname"]);
-					echo("</td>");
-					
-					echo("<td>");
-					echo($row["surname"]);
-					echo("</td>");
-					
-					echo("<td>");
-					echo($row["birth"]);
-					echo("</td>");
-					
-					echo("<td>");
-					echo($row["phoneNumber"]);
-					echo("</td>");
-					
-					
-												
-					if(isset($_POST["POST"]))	{
-						$aktiv = $_POST["aktiv"];
-						$idMembers = $row["idMembers"];
-						$sql = "UPDATE Members SET active='$aktiv' WHERE idMembers='$idMembers';";
-						$results = $connection->query($sql);
-						if($connection->query($sql))
-						{
-
-						}
-						else{
-							echo("error");
-						}	
-					}
-					echo("<td>");
-				?>
-				<form name="aktivJaNei" method="POST">
-				  <input type="radio" name="aktiv" value="1">Aktiv<br>
-				  <input type="radio" name="aktiv" value="0">Ikke aktiv<br>
-				  <input type="submit" name="POST" value="Endre">
-				</form>
-				<?php	
-					echo("</td>");
-					echo("<td>");
-					if (($row["active"]) == 1) {echo("Ja");}	
+					echo("
+					<tr>
+					<td>$fornavn</td>
+					<td>$etternavn</td>
+					<td>$birth</td>
+					<td>$telefon</td>
+					<td>");
+					if (($aktiv) == 1) {echo("Ja");}	
 					else {echo("Nei");}
 					echo("</td>");
 					
-					echo"<td>";
-					echo"<form method='post'>";
-					echo"<input type='hidden' name='slett_id' value='$idMembers'>";
-					echo"<input type='submit' value='Slett' onClick='return confirm('Er du sikker på at du vil slette?')'>";
-					echo"</td>";
-					
-					echo"</tr>";
+					echo"
+					<td><a href='update.php?idMembers=$idMembers'>Update</td>
+					<td><form method='post'>
+					<input type='hidden' name='slett_id' value='$idMembers'>
+					<input type='submit' value='Slett' onClick='return confirm('Er du sikker på at du vil slette?')'>
+					</td>
+					</tr>";
 				}
+				
 				if(isset($_POST["slett_id"])) {
 				$slett_id = $_POST["slett_id"];
 					include 'connectToDatabase.php';

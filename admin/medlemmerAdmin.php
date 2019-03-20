@@ -38,14 +38,20 @@
 				<th>Kontaktperson etternavn</th>
 				<th>Kontaktperson telefon</th>
 				<th>Kontaktperson email</th>
+				<th>Beltegrad</th>
 				
 				</tr>
 				<?php
 				include 'connectToDatabase.php';
 		
-				$sql = "SELECT Members.firstname, Members.surname, Members.birth, Members.gender, Members.phoneNumber, Members.adress, Members.email, Members.start, Members.active, contactPerson.firstnameK, contactPerson.surnameK, Members.phoneNumber, contactPerson.email
-				FROM Members
-				LEFT JOIN contactPerson ON Members.idMembers=contactPerson.idcontactPerson;";
+				$sql = "SELECT firstname, surname, birth, gender, phoneNumber, adress, email, start, active, firstnameK, surnameK, phoneNumberK, emailK, name 
+				FROM Members 
+				JOIN contactPerson
+				ON Members.idMembers=contactPerson.idcontactPerson 
+				JOIN Graduation 
+				ON Members.idMembers= Graduation.idMembers 
+				JOIN BeltDegree 
+				ON Graduation.idMembers= BeltDegree.idBeltDegree";
 				$results = $connection->query($sql);
 
 				while($row = $results->fetch_assoc())
@@ -98,11 +104,15 @@
 					echo("</td>");
 					
 					echo("<td>");
-					echo($row["phoneNumber"]);
+					echo($row["phoneNumberK"]);
 					echo("</td>");
 					
 					echo("<td>");
-					echo($row["email"]);
+					echo($row["emailK"]);
+					echo("</td>");
+					
+					echo("<td>");
+					echo($row["name"]);
 					echo("</td>");
 					echo("</tr>");
 
