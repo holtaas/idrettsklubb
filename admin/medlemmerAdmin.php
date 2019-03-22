@@ -14,7 +14,7 @@
 		<li><a href="kalenderAdmin.php">Kalender</a></li>
 		<li id="current"><a href="medlemmerAdmin.php">Medlemmer</a></li>
 		<li><a href="nyttMedlemAdmin.php">Nytt medlem</a></li>
-		<li><a href="aktivAdmin.php">Aktiv/Slett</a></li>
+		<li><a href="aktivAdmin.php">Rediger medlem</a></li>
 		</ul>
 	</div>
 		

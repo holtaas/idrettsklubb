@@ -36,7 +36,10 @@ include 'connectToDatabase.php';
 		$etternavn = $row["surname"];
 		$birth = $row["birth"];
 		$telefon = $row["phoneNumber"];
-		$aktiv = $row["active"];
+		$active = $row["active"];
+		$adress = $row['adress'];
+		$email = $row['email'];
+		$start = $row['start'];
 
 		echo("	
 			<form method='POST'>
@@ -47,10 +50,16 @@ include 'connectToDatabase.php';
 				Født:<br>
 				<input type='text' name='birth' value='$birth'><br>
 				Telefon:<br>
-				<input type='number' name='phoneNumber' value='$telfon'><br>
+				<input type='number' name='phoneNumber' value='$telefon'><br>
+				Adresse:<br>
+				<input type='text' name='adress' value='$adress'><br>
+				Email:<br>
+				<input type='text' name='email' value='$email'><br>
+				Start år:<br>
+				<input type='number' name='start' value='$start'><br>
 				Aktiv:<br>
 				");
-			if($aktiv==1) {
+			if($active==1) {
 				echo("
 				<select name='active'>
 				<option selected value='1'>Aktiv</option>
@@ -65,8 +74,6 @@ include 'connectToDatabase.php';
 				</select><br>
 				");
 			}
-		
-				
 				
 			echo("<input type='submit' name='Oppdater' value='Oppdater'>
 			</form>
@@ -79,10 +86,13 @@ include 'connectToDatabase.php';
 		$etternavn = $_POST["surname"];
 		$birth = $_POST["birth"];
 		$telefon = $_POST["phoneNumber"];
-		$aktiv = $_POST["active"];
+		$active = $_POST["active"];
+		$adress = $_POST["adress"];
+		$email = $_POST["email"];
+		$start = $_POST["start"];
 		
 		$sql = "UPDATE Members
-				SET firstname = '$fornavn', surname = '$etternavn', birth = '$birth',  phoneNumber = '$telefon',  active = '$aktiv'
+				SET firstname = '$fornavn', surname = '$etternavn', birth = '$birth',  phoneNumber = '$telefon',  active = '$active',  adress = '$adress',  email = '$email',  start = '$start'
 				WHERE idMembers = $idMembers;";
 
 			if($connection->query($sql))

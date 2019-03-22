@@ -14,13 +14,13 @@
 		<li><a href="kalenderAdmin.php">Kalender</a></li>
 		<li><a href="medlemmerAdmin.php">Medlemmer</a></li>
 		<li><a href="nyttMedlemAdmin.php">Nytt medlem</a></li>
-		<li id="current"><a href="aktivAdmin.php">Aktiv/Slett</a></li>
+		<li id="current"><a href="aktivAdmin.php">Rediger medlem</a></li>
 		</ul>
 	</div>
 		
 	<div class="wrapper">
-	<h1>Aktiv/Slett</h1>
-	<p>Her kan du redigere hvem som er aktive medlemmer i klubben.</p>
+	<h1>Rediger medlem</h1>
+	<p>Her kan du redigere info om medlemmene og endre status fra aktiv til ikke aktiv, eller slette.</p>
 		<table class="tabellMedlemmer">
 				
 				<tr>
