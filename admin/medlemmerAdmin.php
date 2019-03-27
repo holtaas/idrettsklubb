@@ -99,10 +99,10 @@
 					echo("
 					</td>
 					<td>$fornavnK</td>
-					<td>$etternavnK)</td>
+					<td>$etternavnK</td>
 					<td>$telefonK</td>
 					<td>$emailK</td>
-					<td>$beltegrad)</td>
+					<td>$beltegrad</td>
 					<td>$graderingsdato</td>
 					</tr>");
 				}

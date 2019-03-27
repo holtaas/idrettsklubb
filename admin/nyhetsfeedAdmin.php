@@ -21,25 +21,24 @@
 	<div class="wrapper">
 	<h1>Nyhetsfeed</h1>
 	<p>I boksen under kan du publisere en nyhet! Kun de siste 5 publiserte nyhetene vil bli synelig på hjemmesiden.</p>
-		<table class="loginTable">
-			<form method="POST">
+		<table action="nyhetsfeedAdmin" class="loginTable">
+			<form method="post">
 				<tr><th>Legg til en nyhet!</th></tr>
 				<tr><td><div><input type="text" name="nyhet" placeholder="Skriv inn nyheten her!" size="60"><br></div></td></tr>
 				
-				<tr><td><div><input type="submit" name="post" value="Post nyheten!"></div></td></tr>
+				<tr><td><div><input type="submit" name="send" value="Post nyheten!"></div></td></tr>
 				
 			</form>
 		</table>
 		<div class="successful">
 		<?php
-		if(isset($_POST["post"]))
+		if(isset($_POST["send"]))
 		{
 			include 'connectToDatabase.php';
 			
 			$nyhet = $_POST["nyhet"];
 
 			$sql = "INSERT INTO News (news) VALUES ('$nyhet');";
-			$results = $connection->query($sql);
 			if($connection->query($sql))
 			{
 			echo('<div class="addedNew">');

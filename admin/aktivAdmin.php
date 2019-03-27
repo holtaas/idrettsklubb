@@ -65,18 +65,49 @@
 					<td><form method='POST' action=''><button name='ID' method='POST' type='submit' value='$idMembers'>Slett</button></form></td>
 					</tr>";
 				}
+			
 				
 			if(isset($_POST["ID"])) 
 			{
 				$slette = $_POST["ID"];
+				
+				$sql = "SELECT * FROM Members WHERE idMembers='$slette'";
+				$results = $connection->query($sql);
+
+				while($row = $results->fetch_assoc())
+				{
+					$idcontactPerson=($row["contactPerson_idcontactPerson"]);
+				}
+				
+				
+				$sql = "DELETE FROM Graduation WHERE idMembers='$slette'";
+				if ($connection->query($sql) === TRUE) 
+				{ 
+					
+				}  
+				else
+				{ 
+					echo("Feil i spørring: " . mysqli_error($connection));
+				} 
+
 				$sql = "DELETE FROM Members WHERE idMembers='$slette'";
 				if ($connection->query($sql) === TRUE) 
 				{ 
-					echo ("Record was deleted successfully"); 
+					echo ("Slettet $fornavn $etternavn."); 
 				}  
 				else
 				{ 
 					echo("Feil i spørring: " . mysqli_error($connection)); 
+				} 
+				
+				$sql = "DELETE FROM contactPerson WHERE idcontactPerson='$idcontactPerson'";
+				if ($connection->query($sql) === TRUE) 
+				{ 
+					
+				}  
+				else
+				{ 
+					echo("Feil i spørring: " . mysqli_error($connection));
 				} 
 
 			}
