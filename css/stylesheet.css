@@ -273,6 +273,10 @@ nav a:hover {
 
 @media screen and (orientation: portrait) {
 	
+	html {
+		font-size: calc(1em + 1vh);
+	}
+	
 	.header {
 		width: 100vw;
 	}
@@ -303,9 +307,18 @@ nav a:hover {
 	#wrapperOne {
 			width: 96%;
 		}
+	
 	.video {
 		width: 90vw;
 		height: 60vw;
 	}
+	
+	.footer {
+		padding: 1vh;
+		width: 100%;
+	}
 
+	.footer th {
+		padding: 0.5vh;
+	}
 }
