@@ -341,10 +341,10 @@ nav a:hover {
 	}
 	
 	#calender {
-		
+		padding-top: 40vh;
 	}
-	
 
+	
 	.overskrift1Histoire {
 		margin: 40vh 10vh 4vh;
 		margin-left: 10vw;
@@ -357,7 +357,7 @@ nav a:hover {
 		margin-left: 10vw;
 	}
 
-	
+
 	.footer {
 		padding: 1vh;
 		width: 100%;
