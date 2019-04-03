@@ -182,7 +182,6 @@ nav a:hover {
 	float: right;
 	background-color: white;
 	display: block;
-	margin-right: -6%;
 	max-width: 15%;
 }
 
@@ -203,6 +202,7 @@ nav a:hover {
 	color: white;
 }
 
+
 .wrapper {
 	height: 100%;
 	width: 100%;
@@ -220,7 +220,7 @@ nav a:hover {
 	width: auto;
 	margin-left: 10vw;
 	margin-right: 4vw;
-	margin-top: 4vh;
+	margin-top: 10vh;
 	margin-bottom: 4vh;
 	float: left;
 }
@@ -237,7 +237,7 @@ nav a:hover {
 
 
 .overskriftHistoire {
-	margin: 4vh 10vh;
+	margin: 10vh 10vh;
 	margin-left: 10vw;
 }
 
@@ -247,13 +247,43 @@ nav a:hover {
 }
 
 .overskriftOmOss {
-	margin: 4vh 10vh;
-	margin-left: 10vw;
+	margin: 10vh auto;
+	text-align: center;
 }
 
 .overskrift1OmOss {
-	margin: 15vh 10vh 4vh;
+	margin: 25vh 10vh 4vh;
 	margin-left: 10vw;
+	text-align: center;
+}
+
+.Trenere img {
+	width: 10vw;
+}
+
+.Trenere th, .Trenere td{
+	border: 1px black solid;
+	padding: 1vw;
+	text-align: center;
+	
+}
+
+.Trenere {
+	margin: auto auto;
+	border-collapse: collapse;
+}
+
+
+.Stilart {
+	margin: auto auto;
+	border-collapse: collapse;
+}
+
+.Stilart th, .Stilart td {
+	border: 1px black solid;
+	padding: 1vw;
+	text-align: center;
+	border-collapse: collapse;
 }
 
 .ParagrafBottom {
@@ -264,6 +294,29 @@ nav a:hover {
 	margin-bottom: 10vh;
 }
 
+.gallery {
+  border: 1px solid #ccc;
+}
+
+.gallery:hover {
+  border: 1px solid #777;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
 
 #calender {
 	padding-top: 24vh;
@@ -327,8 +380,12 @@ nav a:hover {
 	}
 
 	.News {
-		margin-right: 2%;
-		max-width: 60%;
+		width: 90%;
+		max-width: 90%;
+	}
+	
+	.News tr {
+		width: 100%;
 	}
 
 	#wrapperOne {
@@ -350,11 +407,26 @@ nav a:hover {
 	
 	}
 
-
 	.overskrift1OmOss {
 		margin: 40vh 10vh 4vh;
+		text-align: center;
 	}
-
+	
+	.overskriftOmOss {
+		text-align: center;
+	}
+	
+	.Trenere img {
+		width: 15vw;
+	}
+	
+	.Trenere {
+		margin: 0 auto;
+	}
+	
+	.Stilart {
+		margin: 0 auto;
+	}
 
 	.footer {
 		padding: 1vh;
@@ -364,4 +436,6 @@ nav a:hover {
 	.footer th {
 		padding: 0.5vh;
 	}
+	
+	
 }
