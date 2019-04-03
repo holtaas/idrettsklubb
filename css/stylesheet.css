@@ -168,6 +168,7 @@ nav a:hover {
 	margin-top: 3vh;
 }
 
+
 .video {
 	width: 35vw;
 	height: 24vw;
@@ -237,7 +238,33 @@ nav a:hover {
 
 .overskriftHistoire {
 	margin: 4vh 10vh;
+	margin-left: 10vw;
 }
+
+.overskrift1Histoire {
+	margin: 15vh 10vh 4vh;
+	margin-left: 10vw;
+}
+
+.overskriftOmOss {
+	margin: 4vh 10vh;
+	margin-left: 10vw;
+}
+
+.overskrift1OmOss {
+	margin: 15vh 10vh 4vh;
+	margin-left: 10vw;
+}
+
+.ParagrafBottomH {
+	margin-bottom: 10vh;
+}
+
+.ParagrafBottomO {
+	margin-bottom: 10vh;
+}
+
+
 
 #calender {
 	padding-top: 24vh;
@@ -273,6 +300,10 @@ nav a:hover {
 
 @media screen and (orientation: portrait) {
 	
+	html {
+		font-size: calc(1em + 1vh);
+	}
+	
 	.header {
 		width: 100vw;
 	}
@@ -303,9 +334,37 @@ nav a:hover {
 	#wrapperOne {
 			width: 96%;
 		}
+	
 	.video {
 		width: 90vw;
 		height: 60vw;
 	}
+	
+	#calender {
+		
+	}
+	
 
+	.overskrift1Histoire {
+		margin: 40vh 10vh 4vh;
+		margin-left: 10vw;
+	
+	}
+
+
+	.overskrift1OmOss {
+		margin: 40vh 10vh 4vh;
+		margin-left: 10vw;
+	}
+
+	
+	.footer {
+		padding: 1vh;
+		width: 100%;
+		height: 25vh;
+	}
+
+	.footer th {
+		padding: 0.5vh;
+	}
 }
