@@ -55,7 +55,18 @@
 	
 	<!-- Footer -->	
 	<footer class="footer one">
-		<p>HoltAas &copy; 2019</p>
+		<table class="CTA">
+			<tr>
+				<th>Besøksadresse</th>
+				<th>Postadresse</th>
+				<th>Poststed</th>
+			</tr>
+			<tr>
+				<td>Øvre Fossum gård</td>
+				<td>Fossumveien 81</td>
+				<td>0988 Oslo</td>
+			</tr>
+		</table>
 	</footer>
 	<!-- Footer ends -->
 </body>
