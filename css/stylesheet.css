@@ -340,6 +340,24 @@ nav a:hover {
 		height: 60vw;
 	}
 	
+	#calender {
+		
+	}
+	
+
+	.overskrift1Histoire {
+		margin: 40vh 10vh 4vh;
+		margin-left: 10vw;
+	
+	}
+
+
+	.overskrift1OmOss {
+		margin: 40vh 10vh 4vh;
+		margin-left: 10vw;
+	}
+
+	
 	.footer {
 		padding: 1vh;
 		width: 100%;
