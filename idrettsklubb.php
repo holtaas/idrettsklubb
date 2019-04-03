@@ -55,11 +55,13 @@
 
 				while($row = $results->fetch_assoc())
 				{
-					echo("<tr>");
-					echo("<td>");
-					echo($row["news"]);
-					echo("</td>");
-					echo("</tr>");
+					$title = $row['title'];
+					$news = $row['news'];
+					
+					echo("
+					<tr>
+					<td><b>$title</b><br>$news</td>
+					</tr>");
 				}
 					
 				?>
