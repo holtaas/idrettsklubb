@@ -104,11 +104,13 @@
 		</p>
 		
 		<h1 class="overskriftOmOss">Bildegalleri</h1>
+		
+		<div class="galleri">
 
 		<div class="responsive">
  		 <div class="gallery">
     	<a target="_blank" href="src/bilde1.jpg">
-      	<img src="src/bilde1.jpg" alt="missing" width="auto" 	height="auto">
+      	<img src="src/bilde1.jpg" alt="missing">
     	</a>
     	<div class="desc">Form: traditional double weapon</div>
   		</div>
@@ -118,7 +120,7 @@
 		<div class="responsive">
   			<div class="gallery">
    				 <a target="_blank" href="src/bilde2.jpg">
-     			 <img src="src/bilde2.jpg" alt="missing" width="auto" height="auto">
+     			 <img src="src/bilde2.jpg" alt="missing">
     			</a>
     		<div class="desc">Form: Team med litt spesielle drakter</div>
   			</div>
@@ -127,7 +129,7 @@
 		<div class="responsive">
   			<div class="gallery">
    				 <a target="_blank" href="src/bilde3.jpg">
-     			 <img src="src/bilde3.jpg" alt="missing" width="auto" height="auto">
+     			 <img src="src/bilde3.jpg" alt="missing">
     			</a>
     		<div class="desc">Form: Team med litt spesielle drakter</div>
   			</div>
@@ -136,7 +138,7 @@
 		<div class="responsive">
   			<div class="gallery">
    				 <a target="_blank" href="src/bilde4.jpg">
-     			 <img src="src/bilde4.jpg" alt="missing" width="auto" height="auto">
+     			 <img src="src/bilde4.jpg" alt="missing">
     			</a>
     		<div class="desc">Form: Team med litt spesielle drakter</div>
   			</div>
@@ -145,7 +147,7 @@
 		<div class="responsive">
   			<div class="gallery">
    				 <a target="_blank" href="src/bilde5.jpg">
-     			 <img src="src/bilde5.jpg" alt="missing" width="auto" height="auto">
+     			 <img src="src/bilde5.jpg" alt="missing">
     			</a>
     		<div class="desc">Form: Team med litt spesielle drakter</div>
   			</div>
@@ -154,7 +156,7 @@
 		<div class="responsive">
   			<div class="gallery">
    				 <a target="_blank" href="src/bilde7.jpg">
-     			 <img src="src/bilde7.jpg" alt="missing" width="auto" height="auto">
+     			 <img src="src/bilde7.jpg" alt="missing">
     			</a>
     		<div class="desc">Form: Team med litt spesielle drakter</div>
   			</div>
@@ -163,7 +165,7 @@
 		<div class="responsive">
   			<div class="gallery">
    				 <a target="_blank" href="src/bilde8.jpg">
-     			 <img src="src/bilde8.jpg" alt="missing" width="auto" height="auto">
+     			 <img src="src/bilde8.jpg" alt="missing">
     			</a>
     		<div class="desc">Form: Team med litt spesielle drakter</div>
   			</div>
@@ -172,7 +174,7 @@
 		<div class="responsive">
   			<div class="gallery">
    				 <a target="_blank" href="src/bilde9.jpg">
-     			 <img src="src/bilde9.jpg" alt="missing" width="auto" height="auto">
+     			 <img src="src/bilde9.jpg" alt="missing">
     			</a>
     		<div class="desc">Form: Team med litt spesielle drakter</div>
   			</div>
@@ -181,7 +183,7 @@
 		<div class="responsive">
   			<div class="gallery">
    				 <a target="_blank" href="src/bilde10.jpg">
-     			 <img src="src/bilde10.jpg" alt="missing" width="auto" height="auto">
+     			 <img src="src/bilde10.jpg" alt="missing">
     			</a>
     		<div class="desc">Form: Team med litt spesielle drakter</div>
   			</div>
@@ -190,7 +192,7 @@
 		<div class="responsive">
   			<div class="gallery">
    				 <a target="_blank" href="src/bilde11.jpg">
-     			 <img src="src/bilde11.jpg" alt="missing" width="auto" height="auto">
+     			 <img src="src/bilde11.jpg" alt="missing">
     			</a>
     		<div class="desc">Form: Team med litt spesielle drakter</div>
   			</div>
@@ -199,7 +201,7 @@
 		<div class="responsive">
   			<div class="gallery">
    				 <a target="_blank" href="src/bilde12.jpg">
-     			 <img src="src/bilde12.jpg" alt="missing" width="auto" height="auto">
+     			 <img src="src/bilde12.jpg" alt="missing">
     			</a>
     		<div class="desc">Form: Team med litt spesielle drakter</div>
   			</div>
@@ -208,7 +210,7 @@
 		<div class="responsive">
   			<div class="gallery">
    				 <a target="_blank" href="src/bilde13.jpg">
-     			 <img src="src/bilde13.jpg" alt="missing" width="auto" height="auto">
+     			 <img src="src/bilde13.jpg" alt="missing">
     			</a>
     		<div class="desc">Form: Team med litt spesielle drakter</div>
   			</div>
@@ -217,7 +219,7 @@
 		<div class="responsive">
   			<div class="gallery">
    				 <a target="_blank" href="src/bilde14.jpg">
-     			 <img src="src/bilde14.jpg" alt="missing" width="auto" height="auto">
+     			 <img src="src/bilde14.jpg" alt="missing">
     			</a>
     		<div class="desc">Form: Team med litt spesielle drakter</div>
   			</div>
@@ -226,10 +228,12 @@
 		<div class="responsive">
   			<div class="gallery">
    				 <a target="_blank" href="src/bilde15.jpg">
-     			 <img src="src/bilde15.jpg" alt="missing" width="auto" height="auto">
+     			 <img src="src/bilde15.jpg" alt="missing">
     			</a>
     		<div class="desc">Form: Team med litt spesielle drakter</div>
   			</div>
+		</div>
+			
 		</div>
 		
 	</div>

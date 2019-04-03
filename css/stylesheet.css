@@ -295,28 +295,35 @@ nav a:hover {
 }
 
 .gallery {
-  border: 1px solid #ccc;
+    border: 1px solid #ccc;
 }
 
 .gallery:hover {
-  border: 1px solid #777;
+    border: 1px solid #777;
 }
 
 .gallery img {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 
 .desc {
-  padding: 15px;
-  text-align: center;
+    padding: 15px;
+    text-align: center;
 }
 
 .responsive {
-  padding: 0 6px;
-  float: left;
-  width: 24.99999%;
+    padding: 0 6px;
+    width: 40vh;
+	margin: 2vh;
 }
+
+.galleri {
+	flex-wrap: wrap;
+	display: flex;
+	justify-content: space-around;
+}
+
 
 #calender {
 	padding-top: 24vh;
@@ -436,6 +443,8 @@ nav a:hover {
 	.footer th {
 		padding: 0.5vh;
 	}
+	
+	
 	
 	
 }
