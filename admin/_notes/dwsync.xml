@@ -1,1 +1,17 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="connectToDatabase.php" server="elevweb.akershus-fk.no/www_docs/" local="131963727943897358" remote="131979804890000000" Dst="2" />
+<file name="aktivAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="131981527654983336" remote="131981491580000000" Dst="2" />
+<file name="medlemmerAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="131979850432168427" remote="131979850380000000" Dst="1" />
+<file name="nyhetsfeedAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="131981488850350747" remote="131981488770000000" Dst="1" />
+<file name=".DS_Store" server="elevweb.akershus-fk.no/www_docs/" local="131964334386899872" remote="131981552280000000" Dst="1" />
+<file name="admin.php" server="elevweb.akershus-fk.no/www_docs/" local="131977391440115535" remote="131981552290000000" Dst="1" />
+<file name="kalenderAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="131977391701570018" remote="131981552320000000" Dst="1" />
+<file name="login.php" server="elevweb.akershus-fk.no/www_docs/" local="131977394449851915" remote="131981552320000000" Dst="1" />
+<file name="nyttMedlemAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="131977391633975659" remote="131981552320000000" Dst="1" />
+<file name="update.php" server="elevweb.akershus-fk.no/www_docs/" local="131977390577433235" remote="131981552350000000" Dst="1" />
+</dwsync>
+=======
 <?xml version="1.0" encoding="utf-8" ?><dwsync><file name="connectToDatabase.php" server="elevweb.akershus-fk.no/www_docs/" local="3634783246" remote="3637122822" Dst="1" /><file name="aktivAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="131981527654983336" remote="131981527580000000" Dst="1" /><file name="medlemmerAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="131979850432168427" remote="131979850380000000" Dst="1" /><file name="nyhetsfeedAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="131981488850350747" remote="131981488770000000" Dst="1" /></dwsync>
+>>>>>>> 13c9057199c46542b6750e6dbaffec68030dda81
