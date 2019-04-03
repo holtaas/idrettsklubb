@@ -256,14 +256,13 @@ nav a:hover {
 	margin-left: 10vw;
 }
 
-.ParagrafBottomH {
+.ParagrafBottom {
 	margin-bottom: 10vh;
 }
 
-.ParagrafBottomO {
-	margin-bottom: 10vh;
+.ParagrafBottomForside {
+	margin-bottom: 5vh;
 }
-
 
 
 #calender {
