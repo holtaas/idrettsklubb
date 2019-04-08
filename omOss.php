@@ -22,6 +22,7 @@
 	
 	<!-- Wrapper starts -->
 	<div class="wrapper">
+
 		<h1 class="overskrift1OmOss">Trenere</h1>
 		<table class="Trenere">
 			<tr>
@@ -30,24 +31,41 @@
 				<th>Beltegrad</th>
 				<th>Bilde</th>
 			</tr>
-			<tr>
-				<td>Master</td>
-				<td>Siva Vadi</td>
-				<td>1. Dan</td>
-				<td><img src="src/siva.jpg" alt="missing"></td>
-			</tr>
-			<tr>
-				<td>Grand Master</td>
-				<td>Danny A. Huertas</td>
-				<td>8. Dan</td>
-				<td><img src="src/Danny.jpeg" alt="missing"></td>
-			</tr>
-			<tr>
-				<td>Ingen tittel</td>
-				<td>Stein Åke Bjørk</td>
-				<td>Gult</td>
-				<td><img src="src/picture3.jpg" alt="missing"></td>
-			</tr>
+			<?php
+				include 'connectToDatabase.php';
+		
+				$sql = "SELECT Members.firstname, Members.surname, BeltDegree.name, Coach.title, Coach.image FROM Role LEFT JOIN Coach ON Role.idRole = Coach.idRole LEFT JOIN Members ON Coach.idMembers = Members.idMembers LEFT JOIN Graduation ON Members.idMembers = Graduation.idMembers LEFT JOIN BeltDegree ON Graduation.idBeltDegree = BeltDegree.idBeltDegree";
+				
+					if($results = $connection->query($sql))
+					{
+						
+					}
+					else
+					{
+						echo("Feil i brukerinput: " . mysqli_error($connection));
+					}
+
+
+				while($row = $results->fetch_assoc())
+				{
+					
+					$fornavn = $row['firstname'];
+					$etternavn = $row['surname'];
+					$beltegrad = $row['name'];
+					$title = $row['title'];
+					$bilde = $row['image'];
+					
+					echo("
+						<tr>
+							<td>$title</td>
+							<td>$fornavn $etternavn</td>
+							<td>$beltegrad</td>
+							<td><img src='$bilde'></td>
+						</tr>
+						");
+				}
+				?>
+		
 		</table>
 		
 		<h1 class="overskriftOmOss">Stilarter</h1>

@@ -182,7 +182,7 @@ nav a:hover {
 	float: right;
 	background-color: white;
 	display: block;
-	max-width: 15%;
+	max-width: 25%;
 }
 
 .News td {
@@ -252,8 +252,7 @@ nav a:hover {
 }
 
 .overskrift1OmOss {
-	margin: 25vh 10vh 4vh;
-	margin-left: 10vw;
+	margin: 25vh auto 4vh;
 	text-align: center;
 }
 
