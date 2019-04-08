@@ -50,7 +50,7 @@
 				include 'admin/connectToDatabase.php';
 					
 					
-				$sql = "SELECT * FROM aajo2108_idrettslag.News order by idNews desc limit 5";
+				$sql = "SELECT * FROM News order by idNews desc limit 5";
 				$results = $connection->query($sql);
 
 				while($row = $results->fetch_assoc())
