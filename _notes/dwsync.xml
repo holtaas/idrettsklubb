@@ -1,15 +1,12 @@
-<<<<<<< HEAD
-<?xml version="1.0" encoding="utf-8" ?><dwsync><file name="animated-scroll-anchor.js" server="elevweb.akershus-fk.no/www_docs/" local="3634138423" remote="3637122822" Dst="1" /><file name="historie.php" server="elevweb.akershus-fk.no/www_docs/" local="3637126517" remote="3637126548" Dst="1" /><file name="omOss.php" server="elevweb.akershus-fk.no/www_docs/" local="3637136640" remote="3637136639" Dst="1" /><file name="kalender.html" server="elevweb.akershus-fk.no/www_docs/" local="3637126168" remote="3637126167" Dst="1" /><file name="idrettsklubb.php" server="elevweb.akershus-fk.no/www_docs/" local="3637136767" remote="3637571741" Dst="1" /><file name="scrollHide.js" server="elevweb.akershus-fk.no/www_docs/" local="3635144939" remote="3637122822" Dst="1" /><file name=".DS_Store" server="elevweb.akershus-fk.no/www_docs/" local="131981550526905948" remote="131981552270000000" Dst="1" /></dwsync>
-=======
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="animated-scroll-anchor.js" server="elevweb.akershus-fk.no/www_docs/" local="131957669199384287" remote="131987548130000000" Dst="2" />
-<file name="historie.php" server="elevweb.akershus-fk.no/www_docs/" local="131987560161910174" remote="131987657430000000" Dst="2" />
-<file name="omOss.php" server="elevweb.akershus-fk.no/www_docs/" local="131992031901575271" remote="131992031840000000" Dst="2" />
-<file name="kalender.html" server="elevweb.akershus-fk.no/www_docs/" local="131987560161940095" remote="131987657460000000" Dst="2" />
-<file name="idrettsklubb.php" server="elevweb.akershus-fk.no/www_docs/" local="132000576688292224" remote="132000576530000000" Dst="2" />
-<file name="scrollHide.js" server="elevweb.akershus-fk.no/www_docs/" local="131966988015965475" remote="131987548130000000" Dst="2" />
-<file name=".DS_Store" server="elevweb.akershus-fk.no/www_docs/" local="131987643338505949" remote="131987657410000000" Dst="2" />
+<file name="animated-scroll-anchor.js" server="elevweb.akershus-fk.no/www_docs/" local="131957669199384287" remote="132000646410000000" Dst="2" />
+<file name="historie.php" server="elevweb.akershus-fk.no/www_docs/" local="132000651020572585" remote="132000650850000000" Dst="2" />
+<file name="omOss.php" server="elevweb.akershus-fk.no/www_docs/" local="132000666610000000" remote="132000667340000000" Dst="2" />
+<file name="kalender.html" server="elevweb.akershus-fk.no/www_docs/" local="3637126168" remote="3637126167" Dst="1" />
+<file name="idrettsklubb.php" server="elevweb.akershus-fk.no/www_docs/" local="3637136767" remote="3637571741" Dst="1" />
+<file name="scrollHide.js" server="elevweb.akershus-fk.no/www_docs/" local="131966988015965475" remote="132000646420000000" Dst="2" />
+<file name=".DS_Store" server="elevweb.akershus-fk.no/www_docs/" local="131981550526905948" remote="131981552270000000" Dst="1" />
 <file name="connectToDatabase.php" server="elevweb.akershus-fk.no/www_docs/" local="131963727943897358" remote="131992010120000000" Dst="2" />
+<file name="kalender.php" server="elevweb.akershus-fk.no/www_docs/" local="132000646480010377" remote="132000646400000000" Dst="2" />
 </dwsync>
->>>>>>> 4551434a2b28223fc084704f91af8ef2b39c632c

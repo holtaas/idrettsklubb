@@ -1,3 +1,7 @@
+<?php
+ include "languages/config.php";
+ ?>
+
 <!doctype html>
 <html>
 <head>
@@ -12,24 +16,24 @@
 <body>
 	<!-- Header starts -->	
 	<nav class="nav one">
-		<a href="idrettsklubb.php">HJEM</a>
-		<a href="kalender.html">KALENDER</a>
+		<a href="idrettsklubb.php"><?php echo $lang['home'];?></a>
+		<a href="kalender.php"><?php echo $lang['calender'];?></a>
 		<img src="src/logo.png" alt="Logo" class="logo">
-		<a href="historie.php">HISTORIE</a>
-		<a class="current" href="omOss.php">OM OSS</a>
+		<a href="historie.php"><?php echo $lang['history'];?></a>
+		<a class="current" href="omOss.php"><?php echo $lang['about_us'];?></a>
 	</nav>
 	<!-- Header ends -->	
 	
 	<!-- Wrapper starts -->
 	<div class="wrapper">
 
-		<h1 class="overskrift1OmOss">Trenere</h1>
+		<h1 class="overskrift1OmOss"><?php echo $lang['o1'];?></h1>
 		<table class="Trenere">
 			<tr>
-				<th>Tittel</th>
-				<th>Navn</th>
-				<th>Beltegrad</th>
-				<th>Bilde</th>
+				<th><?php echo $lang['o2'];?></th>
+				<th><?php echo $lang['o3'];?></th>
+				<th><?php echo $lang['o4'];?></th>
+				<th><?php echo $lang['o5'];?></th>
 			</tr>
 			<?php
 				include 'connectToDatabase.php';
@@ -68,10 +72,10 @@
 		
 		</table>
 		
-		<h1 class="overskriftOmOss">Stilarter</h1>
+		<h1 class="overskriftOmOss"><?php echo $lang['o6'];?></h1>
 		<table class="Stilart">
 			<tr>
-				<th>Navn på stilarter vi praktiserer</th>
+				<th><?php echo $lang['o7'];?></th>
 			</tr>
 			<tr>
 				<td>AFC</td>
@@ -85,43 +89,42 @@
 
 		</table>
 		
-		<h1 class="overskriftOmOss">Eventer til VM/EM</h1>
+		<h1 class="overskriftOmOss"><?php echo $lang['o8'];?></h1>
 		<h3 class="overskriftOmOss">GSBA - Global stick and blade aliance</h3>
-		<p>	<b>Sayaw / Form:</b> En egenlagd komposisjon av teknikker med våpen og spark/slag, som er på maks 2 minutter. 4 typer: single weapon og double weapon traditional form. Ingen spark over kne, våpen skal ikke mistes og teknikker skal være relatert til sporten. Neste er non-traditional sinlge og multiweapon. Denne er til musikk og er mye friere. Du kan sparke som du vil, triks som spin, salto osv er lov. Bytte av våpen underveis og mye mer drama som å miste våpen underveis er lov hvis man sier ifra på forhånd at det skal skje. Jenter og gutter konkurerer mot hverandre. Bare alder som skiller.
-		Team form: 3 eller mer som lager en oppvisning til musikk. Mer eller mindre alt er lov.
+		<p>	<b><?php echo $lang['o9'];?></b> <?php echo $lang['o10'];?>
 		<br>
 		<br>
-		<b>Single stick:</b> Fullkontakt 3 (4) runder av 1minutt med full beskyttelse. 1 stock. 
+		<b>Single stick:</b> <?php echo $lang['o11'];?>
 		<br>
 		<br>
-		<b>Double stick:</b> Samme som over, men 2 stocker.
+		<b>Double stick:</b> <?php echo $lang['o12'];?>
 		<br>
 		<br>
-		<b>Single stick padded:</b> 1 stokk som har beskytelse på stokken direkte. Full kontakt, men bare beskytelse på hode og hender. 
+		<b>Single stick padded:</b> <?php echo $lang['o13'];?>
 		<br>
 		<br>
-		<b>Multiple weapon padded:</b> Du velger våpenkombinasjon før du går i ringen og sloss som over i padded. Mulige våpen er 1 kort stock, 1 vanlig stock, 2 korte/vanlige stokker. 1 lang stokk (ikke kombinere med andre). 1-2 nunchaco. Kan kombinere alle våpen minus lang stokk. Eksempel 1 kort stokk i venstre hånd og 1 nunchaco i høyre.
+		<b>Multiple weapon padded:</b> <?php echo $lang['o14'];?>
 		<br>
 		<br>
-		<b>Team fight:</b> 3 stykk fra et land mot 3 stykk fra et annet land. 1 minutt full styrke, regler fra single stick. 1 mot 1, neste runde 1 mot 1 osv. Her kåres beste land. Menn mot menn, kvinner mot kvinner. Ingen alder eller vektbegrensninger. En 18 åring på 60 kg+ kan fint møte en 35 åring på 130kg+.
+		<b>Team fight:</b> <?php echo $lang['o15'];?>
 		</p>
 		
 		<h3 class="overskriftOmOss">WEKAF - World Eskrima Kali Arnis Federation</h3>
 		
 		<p>
-		Dette er et annet forbund som vi også konkurer i.
+		<?php echo $lang['o16'];?>
 		<br>
 		<br>
-		<b>Single, double, team og form</b> samme som GSBA. Jenter og gutter konkurer bare mot hverandre i Forms team der det kan være blandede lag.
+		<b><?php echo $lang['o17'];?></b> <?php echo $lang['o18'];?>
 		<br>
 		<br>
-		<b>Knife padded:</b> Point basert knivklamp. 2 minutter, ingen pauser/runder.
+		<b>Knife padded:</b> <?php echo $lang['o19'];?>
 		<br>
 		<br>
-		<b>Bankaw:</b> Lang stokk, fullkontakt som single stick. 
+		<b>Bankaw:</b> <?php echo $lang['o20'];?> 
 		</p>
 		
-		<h1 class="overskriftOmOss">Bildegalleri</h1>
+		<h1 class="overskriftOmOss"><?php echo $lang['o21'];?></h1>
 		
 		<div class="galleri">
 
@@ -130,7 +133,7 @@
     	<a target="_blank" href="src/bilde1.jpg">
       	<img src="src/bilde1.jpg" alt="missing">
     	</a>
-    	<div class="desc">Form: traditional double weapon</div>
+    	<div class="desc"><?php echo $lang['o22'];?></div>
   		</div>
 		</div>
 
@@ -140,7 +143,7 @@
    				 <a target="_blank" href="src/bilde2.jpg">
      			 <img src="src/bilde2.jpg" alt="missing">
     			</a>
-    		<div class="desc">Form: Team med litt spesielle drakter</div>
+    		<div class="desc"><?php echo $lang['o23'];?></div>
   			</div>
 		</div>
 		
@@ -149,7 +152,7 @@
    				 <a target="_blank" href="src/bilde3.jpg">
      			 <img src="src/bilde3.jpg" alt="missing">
     			</a>
-    		<div class="desc">Form: Team med litt spesielle drakter</div>
+    		<div class="desc"><?php echo $lang['o23'];?></div>
   			</div>
 		</div>
 		
@@ -158,7 +161,7 @@
    				 <a target="_blank" href="src/bilde4.jpg">
      			 <img src="src/bilde4.jpg" alt="missing">
     			</a>
-    		<div class="desc">Form: Team med litt spesielle drakter</div>
+    		<div class="desc"><?php echo $lang['o23'];?></div>
   			</div>
 		</div>
 		
@@ -167,7 +170,7 @@
    				 <a target="_blank" href="src/bilde5.jpg">
      			 <img src="src/bilde5.jpg" alt="missing">
     			</a>
-    		<div class="desc">Form: Team med litt spesielle drakter</div>
+    		<div class="desc"><?php echo $lang['o23'];?></div>
   			</div>
 		</div>
 		
@@ -176,7 +179,7 @@
    				 <a target="_blank" href="src/bilde7.jpg">
      			 <img src="src/bilde7.jpg" alt="missing">
     			</a>
-    		<div class="desc">Form: Team med litt spesielle drakter</div>
+    		<div class="desc"><?php echo $lang['o23'];?></div>
   			</div>
 		</div>
 		
@@ -185,7 +188,7 @@
    				 <a target="_blank" href="src/bilde8.jpg">
      			 <img src="src/bilde8.jpg" alt="missing">
     			</a>
-    		<div class="desc">Form: Team med litt spesielle drakter</div>
+    		<div class="desc"><?php echo $lang['o23'];?></div>
   			</div>
 		</div>
 		
@@ -194,7 +197,7 @@
    				 <a target="_blank" href="src/bilde9.jpg">
      			 <img src="src/bilde9.jpg" alt="missing">
     			</a>
-    		<div class="desc">Form: Team med litt spesielle drakter</div>
+    		<div class="desc"><?php echo $lang['o23'];?></div>
   			</div>
 		</div>
 		
@@ -203,7 +206,7 @@
    				 <a target="_blank" href="src/bilde10.jpg">
      			 <img src="src/bilde10.jpg" alt="missing">
     			</a>
-    		<div class="desc">Form: Team med litt spesielle drakter</div>
+    		<div class="desc"><?php echo $lang['o23'];?></div>
   			</div>
 		</div>
 		
@@ -212,7 +215,7 @@
    				 <a target="_blank" href="src/bilde11.jpg">
      			 <img src="src/bilde11.jpg" alt="missing">
     			</a>
-    		<div class="desc">Form: Team med litt spesielle drakter</div>
+    		<div class="desc"><?php echo $lang['o23'];?></div>
   			</div>
 		</div>
 		
@@ -221,7 +224,7 @@
    				 <a target="_blank" href="src/bilde12.jpg">
      			 <img src="src/bilde12.jpg" alt="missing">
     			</a>
-    		<div class="desc">Form: Team med litt spesielle drakter</div>
+    		<div class="desc"><?php echo $lang['o23'];?></div>
   			</div>
 		</div>
 		
@@ -230,7 +233,7 @@
    				 <a target="_blank" href="src/bilde13.jpg">
      			 <img src="src/bilde13.jpg" alt="missing">
     			</a>
-    		<div class="desc">Form: Team med litt spesielle drakter</div>
+    		<div class="desc"><?php echo $lang['o23'];?></div>
   			</div>
 		</div>
 		
@@ -239,7 +242,7 @@
    				 <a target="_blank" href="src/bilde14.jpg">
      			 <img src="src/bilde14.jpg" alt="missing">
     			</a>
-    		<div class="desc">Form: Team med litt spesielle drakter</div>
+    		<div class="desc"><?php echo $lang['o23'];?></div>
   			</div>
 		</div>
 		
@@ -248,7 +251,7 @@
    				 <a target="_blank" href="src/bilde15.jpg">
      			 <img src="src/bilde15.jpg" alt="missing">
     			</a>
-    		<div class="desc">Form: Team med litt spesielle drakter</div>
+    		<div class="desc"><?php echo $lang['o23'];?></div>
   			</div>
 		</div>
 			
@@ -259,16 +262,19 @@
 	
 	<!-- Footer -->	
 	<footer class="footer one">
+
 		<table class="CTA">
 			<tr>
-				<th>Besøksadresse</th>
-				<th>Postadresse</th>
-				<th>Poststed</th>
+				<th><?php echo $lang['adress'];?></th>
+				<th><?php echo $lang['mailadress'];?></th>
+				<th><?php echo $lang['mailcity'];?></th>
+				<th>Change language</th>
 			</tr>
 			<tr>
 				<td>Øvre Fossum gård</td>
 				<td>Fossumveien 81</td>
 				<td>0988 Oslo</td>
+				<td><a href="omOss.php?lang=no">Norwegian</a> | <a href="omOss.php?lang=en">English</a></td>
 			</tr>
 		</table>
 	</footer>
