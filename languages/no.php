@@ -7,7 +7,7 @@
 		"news" => "Nyheter",
 		"adress" => "Besøksadresse",
 		"mailadress" => "Postadresse",
-		
+		"mailcity" => "Poststed",
 		"hTitle1" => "Overskrift 1",
 		"hTitle2" => "Overskrift 2",
 		"hTitle3" => "Overskrift 3",
