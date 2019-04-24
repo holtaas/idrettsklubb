@@ -38,6 +38,6 @@
 	<h1>Bruksanvisning</h1>
 	<p>På denne siden har du mulighet til å administrere Arnis Huertes hjemmeside. Til venstre på siden har du muligheten til å navigere deg gjennom redigeringsalternativer for hjemmesiden. </p>
 	</div>
-	
+
 </body>
 </html>

@@ -1,4 +1,4 @@
-y<!doctype html>
+<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -40,6 +40,8 @@ y<!doctype html>
 				<th>Kontaktperson email</th>
 				<th>Beltegrad</th>
 				<th>Graderingsdato</th>
+				<th>Medlem</th>
+				<th>Trener</th>
 				
 				</tr>
 				<?php
@@ -85,8 +87,8 @@ y<!doctype html>
 					<td>$etternavn</td>
 					<td>$birth</td>
 					<td>");
-					if (($gender) == 1) {echo("Male");}	
-					else {echo("Female");}
+					if (($gender) == 1) {echo("Mann");}	
+					else {echo("Kvinne");}
 					echo("
 					</td>
 					<td>$telefon</td>			
@@ -105,6 +107,7 @@ y<!doctype html>
 					<td>$beltegrad</td>
 					<td>$graderingsdato</td>
 					</tr>");
+					
 				}
 			
 				?>

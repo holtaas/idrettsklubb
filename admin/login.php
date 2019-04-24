@@ -19,7 +19,7 @@
 			</form>
 		</table>
 		<div class="successful">
-		<?php
+		<?php	
 		if(isset($_POST["login"]))
 		{
 			include 'connectToDatabase.php';
@@ -27,7 +27,7 @@
 			$brukernavn = $_POST["username"];
 			$passord = $_POST["password"];
 
-			$sql = "SELECT username, password FROM login;";
+			$sql = "SELECT username, password FROM login";
 			$results = $connection->query($sql);
 			
 			$foundUser = false;
@@ -43,7 +43,9 @@
 				echo("Wrong username and or password");
 			}
 		}
-		?>
+		
+		?>	
+		
 	</div>
 </body>
 </html>
