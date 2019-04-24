@@ -1,5 +1,9 @@
+<?php
+ include "languages/config.php";
+ ?>
+
 <!doctype html>
-<html>
+<html lang="no">
 <head>
 <meta charset="utf-8">
 <title>Idrettsklubb</title>
@@ -12,11 +16,11 @@
 <body>
 	<!-- Header starts -->	
 	<nav class="nav one">
-		<a class="current" href="idrettsklubb.php">HJEM</a>
-		<a href="kalender.html">KALENDER</a>
+		<a class="current" href="idrettsklubb.php"><?php echo $lang['home'];?></a>
+		<a href="kalender.html"><?php echo $lang['calender'];?></a>
 		<img src="src/logo.png" alt="Logo" class="logo">
-		<a href="historie.php">HISTORIE</a>
-		<a href="omOss.php">OM OSS</a>
+		<a href="historie.php"><?php echo $lang['history'];?></a>
+		<a href="omOss.php"><?php echo $lang['about_us'];?></a>
 	</nav>
 	
 	<!-- Header ends -->	
@@ -44,7 +48,7 @@
 				
 		<table class="News">
 			  <tr>
-				<th>Nyheter</th>
+				<th><?php echo $lang['news'];?></th>
 			  </tr>
 				<?php
 				include 'admin/connectToDatabase.php';
@@ -84,14 +88,16 @@
 
 		<table class="CTA">
 			<tr>
-				<th>Besøksadresse</th>
-				<th>Postadresse</th>
-				<th>Poststed</th>
+				<th><?php echo $lang['adress'];?></th>
+				<th><?php echo $lang['mailadress'];?></th>
+				<th><?php echo $lang['mailcity'];?></th>
+				<th>Change language</th>
 			</tr>
 			<tr>
 				<td>Øvre Fossum gård</td>
 				<td>Fossumveien 81</td>
 				<td>0988 Oslo</td>
+				<td><a href="idrettsklubb.php?lang=no">Norwegian</a> | <a href="idrettsklubb.php?lang=en">English</a></td>
 			</tr>
 		</table>
 	</footer>

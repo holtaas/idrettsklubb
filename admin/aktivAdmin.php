@@ -61,7 +61,7 @@
 					echo("</td>");
 					
 					echo"
-					<td><a href='update.php?idMembers=$idMembers'>Update</td>
+					<td><a href='update.php?idMembers=$idMembers'>Update</a></td>
 					<td><form method='POST' action=''><button name='ID' method='POST' type='submit' value='$idMembers'>Slett</button></form></td>
 					</tr>";
 				}
@@ -115,8 +115,7 @@
 				
 				
 		</table>
-		
-	</div>
+	</div> 
 	
 </body>
 </html>
