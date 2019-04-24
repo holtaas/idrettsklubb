@@ -6,6 +6,22 @@
 <link rel="stylesheet" href="css/admin.css">
 </head>
 <body>
+	
+	<?php
+	
+	//echo("print_r($_POST)");
+	
+	if (($_POST["login"] == "noe") ) {
+		
+		echo("Du er logget inn");
+	}
+	
+	else {
+		echo("Du må logge inn");
+		die();
+	}
+
+	?>
 	<div class="nav">
 		<img src="src/admin.png" alt="admin" class="logo">
 		<ul>
