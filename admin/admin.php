@@ -18,7 +18,7 @@
 	
 	else {
 		echo("Du må logge inn");
-		die();
+		die(); //Denne gjør at man ikke kan gå direkte til admin.php
 	}
 
 	?>
