@@ -10,7 +10,7 @@
 			<td>Øvre Fossum gård</td>
 			<td>Fossumveien 81</td>
 			<td>0988 Oslo</td>
-			<td><a href="idrettsklubb.php?lang=no">Norwegian</a> | <a href="idrettsklubb.php?lang=en">English</a></td>
+			<td><a href="idrettsklubb.php?lang=no"><img src="src/no.png" alt="no" class="flag"></a> <a href="idrettsklubb.php?lang=en"><img src="src/en.png" alt="en" class="flag"></a></td>
 		</tr>
 	</table>
 </footer>
