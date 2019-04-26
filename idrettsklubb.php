@@ -11,7 +11,7 @@
 	<!-- Header ends -->	
 	
 	<!-- Index starts -->
-	<div class="parallax index">
+	<div class="index">
 	<div class="text">
 	<h1>STICK-FIGHTING OSLO</h1>
 	<h2>Eskrima - Arnis - Kali</h2>
