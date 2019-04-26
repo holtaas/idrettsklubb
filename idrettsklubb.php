@@ -1,23 +1,8 @@
-<?php
- include "languages/config.php";
- ?>
-
-<!doctype html>
-<html lang="no">
-<head>
-<meta charset="utf-8">
-<title>Idrettsklubb</title>
-<link rel="stylesheet" href="css/stylesheet.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="animated-scroll-anchor.js"></script>
-<script src="scrollHide.js"></script>	
-</head>
-	
-<body>
+<?php require('header.php'); ?>
 	<!-- Header starts -->	
 	<nav class="nav one">
 		<a class="current" href="idrettsklubb.php"><?php echo $lang['home'];?></a>
-		<a href="kalender.html"><?php echo $lang['calender'];?></a>
+		<a href="kalender.php"><?php echo $lang['calender'];?></a>
 		<img src="src/logo.png" alt="Logo" class="logo">
 		<a href="historie.php"><?php echo $lang['history'];?></a>
 		<a href="omOss.php"><?php echo $lang['about_us'];?></a>
@@ -84,23 +69,7 @@
 	<!-- Wrapper ends -->
 	
 	<!-- Footer -->	
-	<footer class="footer one">
-
-		<table class="CTA">
-			<tr>
-				<th><?php echo $lang['adress'];?></th>
-				<th><?php echo $lang['mailadress'];?></th>
-				<th><?php echo $lang['mailcity'];?></th>
-				<th>Change language</th>
-			</tr>
-			<tr>
-				<td>Øvre Fossum gård</td>
-				<td>Fossumveien 81</td>
-				<td>0988 Oslo</td>
-				<td><a href="idrettsklubb.php?lang=no">Norwegian</a> | <a href="idrettsklubb.php?lang=en">English</a></td>
-			</tr>
-		</table>
-	</footer>
+	<?php require('footer.php'); ?>
 	<!-- Footer ends -->
 </body>
 </html>

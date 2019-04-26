@@ -1,27 +1,6 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Admin</title>
-<link rel="stylesheet" href="css/admin.css">
-</head>
-<body>
+<?php require ('headerAdmin.php'); ?>
 	
-	<?php
 	
-	//echo("print_r($_POST)");
-	
-	if (($_POST["login"] == "noe") ) {
-		
-		echo("Du er logget inn");
-	}
-	
-	else {
-		echo("Du må logge inn");
-		die(); //Denne gjør at man ikke kan gå direkte til admin.php
-	}
-
-	?>
 	<div class="nav">
 		<img src="src/admin.png" alt="admin" class="logo">
 		<ul>
@@ -35,8 +14,18 @@
 	</div>
 		
 	<div class="wrapper">
-	<h1>Bruksanvisning</h1>
-	<p>På denne siden har du mulighet til å administrere Arnis Huertes hjemmeside. Til venstre på siden har du muligheten til å navigere deg gjennom redigeringsalternativer for hjemmesiden. </p>
+	<?php 
+		if (isset($_SESSION['username'])){
+			echo ('
+				<h1>Bruksanvisning</h1>
+				<p>På denne siden har du mulighet til å administrere Arnis Huertes hjemmeside. Til venstre på siden har du muligheten til å navigere deg gjennom redigeringsalternativer for hjemmesiden. </p>
+			');
+		}
+		else {
+		echo(" <p class='login-status'> Du er ikke logget inn! </p>");
+		}
+	?>
+	
 	</div>
 
 </body>
