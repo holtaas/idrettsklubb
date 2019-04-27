@@ -1,16 +1,16 @@
-<?php require ('headerAdmin.php'); ?>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Admin</title>
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
 <?php
 include 'connectToDatabase.php';
 
-	if(isset($_GET["idMembers"]))	
-	{
-		$idMembers = $_GET["idMembers"];
-	}
-	else
-	{
-		die("Må sende medlemsID");
-	}
-	
+
+	$idMembers = 32;
 	$sql = "SELECT * FROM Members WHERE idMembers = $idMembers";
 	
 		if($results = $connection->query($sql))
@@ -24,15 +24,16 @@ include 'connectToDatabase.php';
 	
 	while($row = $results->fetch_assoc())
 	{
-		$idMembers = $row["idMembers"];
+		
 		$fornavn = $row["firstname"];
 		$etternavn = $row["surname"];
 		$birth = $row["birth"];
 		$telefon = $row["phoneNumber"];
 		$active = $row["active"];
-		$adress = $row['adress'];
-		$email = $row['email'];
-		$start = $row['start'];
+		$adress = $row["adress"];
+		$email = $row["email"];
+		$start = $row["start"];
+		
 
 		echo("
 			<form method='POST'>
@@ -68,11 +69,7 @@ include 'connectToDatabase.php';
 				");
 			}
 				
-			echo("
-			<input type='submit' name='Oppdater' value='Oppdater'><br><br>
-			Beltegrad:<br>
-				
-				");
+			echo('Beltegrad:<br>');
 				$sql = "SELECT * FROM BeltDegree";
 				$result = $connection->query($sql);
 				echo "<select name='idBeltDegree'>";
@@ -85,8 +82,8 @@ include 'connectToDatabase.php';
 			echo ("</select><br>
 			Graderingsdato<br>
 			<input type='date' name='graduationDate' placeholder='2019-01-18'><br>
-			<input type='submit' name='LeggTilGradering' value='Legg til ny gradering!'><br>
-			
+				
+			<input type='submit' name='Oppdater' value='Oppdater'>
 			</form>");
 	}
 	
@@ -100,7 +97,8 @@ include 'connectToDatabase.php';
 		$adress = $_POST["adress"];
 		$email = $_POST["email"];
 		$start = $_POST["start"];
-		
+		$idBeltDegree = $_POST["idBeltDegree"];
+		$graduationDate = $_POST["graduationDate"];
 		
 		$sql = "UPDATE Members
 				SET firstname = '$fornavn', surname = '$etternavn', birth = '$birth',  phoneNumber = '$telefon',  active = '$active',  adress = '$adress',  email = '$email',  start = '$start'
@@ -108,27 +106,20 @@ include 'connectToDatabase.php';
 
 			if($connection->query($sql))
 			{
-				header('Location: aktivAdmin.php');
+				
 
 			}
 			else{
 				echo("Error description: " . mysqli_error($connection));
 			}	
-		
-	}	
-	if(isset($_POST["LeggTilGradering"]))
-	{
-		$idBeltDegree = $_POST["idBeltDegree"];
-		$graduationDate = $_POST["graduationDate"];
-		
 		$sql = "INSERT INTO Graduation (idMembers, idBeltDegree, graduationDate) VALUES ('$idMembers', '$idBeltDegree', '$graduationDate');";
-				if($connection->query($sql))
-				{
-					echo("En ny gradering for $fornavn $etternavn ble lagt til!");
-				}
-				else{
-					echo("Feil i brukerinput: " . mysqli_error($connection));
-				}
+			if($connection->query($sql))
+			{
+				header('Location: aktivAdmin.php'); 
+			}
+			else{
+				echo("Feil i brukerinput: " . mysqli_error($connection));
+			}
 	}	
 	?>
 </body>

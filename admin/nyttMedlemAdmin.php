@@ -12,7 +12,10 @@
 	</div>
 		
 	<div class="wrapper">
-	<h1>Nytt medlem</h1>
+	<?php 
+		if (isset($_SESSION['username'])){
+			echo ('
+				<h1>Nytt medlem</h1>
 		<p>Her kan du legge til nye medlemmer til klubben!</p>
 			<table id="nyttMedlemtableOne">
 			<form method="POST">	
@@ -39,7 +42,7 @@
 				<tr><td><div><input type="text" name="email" placeholder="ola.nordmann@gmail.com"><br></div></td></tr>	
 				<tr><td><div>Beltegrad:</div></td></tr>
 				<tr><td><div>
-				<?php
+				');
 				include 'connectToDatabase.php';
 				$sql = "SELECT * FROM BeltDegree";
 				$result = $connection->query($sql);
@@ -50,39 +53,39 @@
 					
 					echo "<option value=$idBeltDegree>$name</option>";
 				}
-				echo "</select>";
-				?>
+				echo ('</select>
+				
 				<br></div></td></tr>
 				</table>
 				
 				<table id="nyttMedlemtableTwo" style="margin: 0 auto;">
-				<tr><td><div>Graderingsdato:</div></td></tr>
-				<tr><td><div><input type="date" name="graduationDate" placeholder="2000-01-18"><br></div></td></tr>
-				<tr><td><div>Første gang aktiv:</div></td></tr>
-				<tr><td><div><input type="number" name="aktivF" placeholder="2006"><br></div></td></tr>
-				<tr><td><div>Aktiv:</div></td></tr>
-				<tr><td><div>
-				<select name="aktiv">
-				<option value="1">Ja</option>
-				<option value="0">Nei</option>
-				</select>
-				<br></div></td></tr>
-				
-				<tr><td><div>Kontaktperson fornavn:</div></td></tr>
-				<tr><td><div><input type="text" name="firstnameK" placeholder="Kari"><br></div></td></tr>
-				<tr><td><div>Kontaktperson etternavn:</div></td></tr>
-				<tr><td><div><input type="text" name="surnameK" placeholder="Nordmann"><br></div></td></tr>
-				<tr><td><div>Kontaktperson telefon:</div></td></tr>
-				<tr><td><div><input type="number" name="phoneK" placeholder="98765432"><br></div></td></tr>
-				<tr><td><div>Kontaktperson email:</div></td></tr>
-				<tr><td><div><input type="text" name="emailK" placeholder="kari.nordmann@gmail.com"><br></div></td></tr>
-				
-				<tr><td><div><input type="submit" name="leggtil" value="Legg til"></div></td></tr>
-				<tr><td><div><br></div></td></tr>
-			</form>
-			</table>	
+					<tr><td><div>Graderingsdato:</div></td></tr>
+					<tr><td><div><input type="date" name="graduationDate" placeholder="2000-01-18"><br></div></td></tr>
+					<tr><td><div>Første gang aktiv:</div></td></tr>
+					<tr><td><div><input type="number" name="aktivF" placeholder="2006"><br></div></td></tr>
+					<tr><td><div>Aktiv:</div></td></tr>
+					<tr><td><div>
+					<select name="aktiv">
+					<option value="1">Ja</option>
+					<option value="0">Nei</option>
+					</select>
+					<br></div></td></tr>
 
-		<?php
+					<tr><td><div>Kontaktperson fornavn:</div></td></tr>
+					<tr><td><div><input type="text" name="firstnameK" placeholder="Kari"><br></div></td></tr>
+					<tr><td><div>Kontaktperson etternavn:</div></td></tr>
+					<tr><td><div><input type="text" name="surnameK" placeholder="Nordmann"><br></div></td></tr>
+					<tr><td><div>Kontaktperson telefon:</div></td></tr>
+					<tr><td><div><input type="number" name="phoneK" placeholder="98765432"><br></div></td></tr>
+					<tr><td><div>Kontaktperson email:</div></td></tr>
+					<tr><td><div><input type="text" name="emailK" placeholder="kari.nordmann@gmail.com"><br></div></td></tr>
+
+					<tr><td><div><input type="submit" name="leggtil" value="Legg til"></div></td></tr>
+					<tr><td><div><br></div></td></tr>
+				</form>
+				</table>	
+
+				');
 
 		if(isset($_POST["leggtil"]))
 		{
@@ -154,8 +157,15 @@
 				echo("Feil i brukerinput: " . mysqli_error($connection));
 			}
 		}
-		?>
+	
 		
+		
+		}
+		else {
+		echo(" <p class='login-status'> Du er ikke logget inn! </p>");
+		}
+	?>
+	
 	</div>
 	
 </body>

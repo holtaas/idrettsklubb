@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
 <file name="connectToDatabase.php" server="elevweb.akershus-fk.no/www_docs/" local="131963727943897358" remote="132006607870000000" Dst="2" />
-<file name="aktivAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="132006752398007511" remote="132006752340000000" Dst="2" />
-<file name="medlemmerAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="132006752161748301" remote="132006752100000000" Dst="2" />
-<file name="nyhetsfeedAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="132006752511950400" remote="132006752460000000" Dst="2" />
+<file name="aktivAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="132008564668479768" remote="132008564570000000" Dst="2" />
+<file name="medlemmerAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="132008534117841192" remote="132008534020000000" Dst="2" />
+<file name="nyhetsfeedAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="132006887261303563" remote="132007772260000000" Dst="2" />
 <file name=".DS_Store" server="elevweb.akershus-fk.no/www_docs/" local="131964334386899872" remote="131981516280000000" Dst="2" />
 <file name="admin.php" server="elevweb.akershus-fk.no/www_docs/" local="132006889827191444" remote="132007444020000000" Dst="2" />
-<file name="kalenderAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="132006752463172474" remote="132006752410000000" Dst="2" />
-<file name="nyttMedlemAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="132006752569874320" remote="132006752510000000" Dst="2" />
-<file name="update.php" server="elevweb.akershus-fk.no/www_docs/" local="132006752630201585" remote="132006752570000000" Dst="2" />
+<file name="kalenderAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="132006885236304442" remote="132007772260000000" Dst="2" />
+<file name="nyttMedlemAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="132006889300841480" remote="132007772270000000" Dst="2" />
+<file name="update.php" server="elevweb.akershus-fk.no/www_docs/" local="132008565671461931" remote="132008565570000000" Dst="2" />
 <file name="headerAdmin.php" server="elevweb.akershus-fk.no/www_docs/" local="132007446431686112" remote="132007446370000000" Dst="2" />
+<file name="updateTool.php" server="elevweb.akershus-fk.no/www_docs/" local="132008556274746750" remote="132008556180000000" Dst="2" />
 </dwsync>

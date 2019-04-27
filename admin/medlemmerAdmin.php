@@ -12,7 +12,10 @@
 	</div>
 		
 	<div class="wrapper" > 
-	<h1>Medlemmer</h1>
+	<?php 
+		if (isset($_SESSION['username'])){
+			echo ('
+				<h1>Medlemmer</h1>
 	<p>Her får du en oversikt over alle medlemmene i klubben!</p>
 	
 	<table class="tabellMedlemmer">
@@ -35,10 +38,10 @@
 				<th>Graderingsdato</th>
 				
 				</tr>
-				<?php
+				');
 				include 'connectToDatabase.php';
 		
-				$sql = "SELECT firstname, Members.surname, Members.birth, Members.gender, Members.phoneNumber, Members.adress, Members.email, Members.start, Members.active, contactPerson.firstnameK, contactPerson.surnameK, contactPerson.phoneNumberK, contactPerson.emailK, BeltDegree.name, Graduation.graduationDate FROM contactPerson LEFT JOIN Members ON contactPerson.idcontactPerson = Members.contactPerson_idcontactPerson LEFT JOIN Graduation ON Members.idMembers = Graduation.idMembers LEFT JOIN BeltDegree ON Graduation.idBeltDegree = BeltDegree.idBeltDegree";
+				$sql = "SELECT Members.firstname, Members.surname, Members.birth, Members.gender, Members.phoneNumber, Members.adress, Members.email, Members.start, Members.active, contactPerson.firstnameK, contactPerson.surnameK, contactPerson.phoneNumberK, contactPerson.emailK, BeltDegree.name, Graduation.graduationDate FROM contactPerson LEFT JOIN Members ON contactPerson.idcontactPerson = Members.contactPerson_idcontactPerson LEFT JOIN Graduation ON Members.idMembers = Graduation.idMembers LEFT JOIN BeltDegree ON Graduation.idBeltDegree = BeltDegree.idBeltDegree";
 				
 					if($results = $connection->query($sql))
 					{
@@ -101,10 +104,17 @@
 					
 				}
 			
-				?>
 				
 				
-		</table>
+				
+		echo('</table>');
+			
+		}
+		else {
+		echo(" <p class='login-status'> Du er ikke logget inn! </p>");
+		}
+	?>
+	
 		
 	</div>
 	
