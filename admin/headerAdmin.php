@@ -15,7 +15,7 @@
 			<?php if (isset($_SESSION['username'])){
 			echo ('
 			<form action="includes/logout.inc.php" method="post">
-				<div class="logininfo"><p>Klikk her for å logge ut:    </p><button type="submit" name="logout-submit" class="logout">Logout</button></div>
+				<div class="logininfo"><p>Klikk her for å logge ut:    </p><button type="submit" name="logout-submit" class="logout">Log Out</button></div>
 			</form>
 			');
 			}

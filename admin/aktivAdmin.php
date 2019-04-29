@@ -112,7 +112,7 @@
 		echo('</table>');
 		}
 		else {
-		echo(" <p class='login-status'> Du er ikke logget inn! </p>");
+		echo(' <p class="login-status"> Du er ikke logget inn! </p>');
 		}
 	?>
 	

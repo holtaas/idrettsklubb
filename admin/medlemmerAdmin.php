@@ -41,7 +41,7 @@
 				');
 				include 'connectToDatabase.php';
 		
-				$sql = "SELECT Members.firstname, Members.surname, Members.birth, Members.gender, Members.phoneNumber, Members.adress, Members.email, Members.start, Members.active, contactPerson.firstnameK, contactPerson.surnameK, contactPerson.phoneNumberK, contactPerson.emailK, BeltDegree.name, Graduation.graduationDate FROM contactPerson LEFT JOIN Members ON contactPerson.idcontactPerson = Members.contactPerson_idcontactPerson LEFT JOIN Graduation ON Members.idMembers = Graduation.idMembers LEFT JOIN BeltDegree ON Graduation.idBeltDegree = BeltDegree.idBeltDegree";
+				$sql = "SELECT Members.idMembers, Members.firstname, Members.surname, Members.birth, Members.gender, Members.phoneNumber, Members.adress, Members.email, Members.start, Members.active, contactPerson.firstnameK, contactPerson.surnameK, contactPerson.phoneNumberK, contactPerson.emailK, BeltDegree.name, Graduation.graduationDate FROM contactPerson LEFT JOIN Members ON contactPerson.idcontactPerson = Members.contactPerson_idcontactPerson LEFT JOIN Graduation ON Members.idMembers = Graduation.idMembers LEFT JOIN BeltDegree ON Graduation.idBeltDegree = BeltDegree.idBeltDegree order by Members.firstname, Graduation.idBeltDegree desc";
 				
 					if($results = $connection->query($sql))
 					{
@@ -75,7 +75,9 @@
 					$beltegrad = $row['name'];
 					$graderingsdato = $row['graduationDate'];
 					
-					echo("
+					if($tempIdMembers != $idMembers) {
+				
+				echo("
 					<tr>
 					<td>$fornavn</td>
 					<td>$etternavn</td>
@@ -98,9 +100,13 @@
 					<td>$etternavnK</td>
 					<td>$telefonK</td>
 					<td>$emailK</td>
-					<td>$beltegrad</td>
+					<td><a href='viewBelts.php?idMembers=$idMembers'>$beltegrad</a></td>
 					<td>$graderingsdato</td>
 					</tr>");
+					
+				}
+				
+				$tempIdMembers = $idMembers;
 					
 				}
 			
@@ -115,7 +121,6 @@
 		}
 	?>
 	
-		
 	</div>
 	
 </body>

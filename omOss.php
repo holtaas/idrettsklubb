@@ -23,7 +23,7 @@
 			<?php
 				include 'connectToDatabase.php';
 		
-				$sql = "SELECT Members.firstname, Members.surname, BeltDegree.name, Coach.title, Coach.image FROM Role LEFT JOIN Coach ON Role.idRole = Coach.idRole LEFT JOIN Members ON Coach.idMembers = Members.idMembers LEFT JOIN Graduation ON Members.idMembers = Graduation.idMembers LEFT JOIN BeltDegree ON Graduation.idBeltDegree = BeltDegree.idBeltDegree";
+				$sql = "SELECT Members.idMembers, Members.firstname, Members.surname, BeltDegree.name, Coach.title, Coach.image FROM Role LEFT JOIN Coach ON Role.idRole = Coach.idRole LEFT JOIN Members ON Coach.idMembers = Members.idMembers LEFT JOIN Graduation ON Members.idMembers = Graduation.idMembers LEFT JOIN BeltDegree ON Graduation.idBeltDegree = BeltDegree.idBeltDegree order by Members.firstname, Graduation.idBeltDegree desc";
 				
 					if($results = $connection->query($sql))
 					{
@@ -37,13 +37,15 @@
 
 				while($row = $results->fetch_assoc())
 				{
-					
+					$idMembers = $row['idMembers'];
 					$fornavn = $row['firstname'];
 					$etternavn = $row['surname'];
 					$beltegrad = $row['name'];
 					$title = $row['title'];
 					$bilde = $row['image'];
 					
+					if($tempIdMembers != $idMembers) {
+				
 					echo("
 						<tr>
 							<td>$title</td>
@@ -52,6 +54,9 @@
 							<td><img src='$bilde'></td>
 						</tr>
 						");
+					}
+				
+					$tempIdMembers = $idMembers;
 				}
 				?>
 		
