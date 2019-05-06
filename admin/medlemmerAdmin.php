@@ -1,11 +1,4 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Admin</title>
-<link rel="stylesheet" href="css/admin.css">
-</head>
-<body>
+<?php require ('headerAdmin.php'); ?>
 	<div class="nav">
 		<img src="src/admin.png" alt="admin" class="logo">
 		<ul>
@@ -19,7 +12,10 @@
 	</div>
 		
 	<div class="wrapper" > 
-	<h1>Medlemmer</h1>
+	<?php 
+		if (isset($_SESSION['username'])){
+			echo ('
+				<h1>Medlemmer</h1>
 	<p>Her får du en oversikt over alle medlemmene i klubben!</p>
 	
 	<table class="tabellMedlemmer">
@@ -40,14 +36,12 @@
 				<th>Kontaktperson email</th>
 				<th>Beltegrad</th>
 				<th>Graderingsdato</th>
-				<th>Medlem</th>
-				<th>Trener</th>
 				
 				</tr>
-				<?php
+				');
 				include 'connectToDatabase.php';
 		
-				$sql = "SELECT firstname, Members.surname, Members.birth, Members.gender, Members.phoneNumber, Members.adress, Members.email, Members.start, Members.active, contactPerson.firstnameK, contactPerson.surnameK, contactPerson.phoneNumberK, contactPerson.emailK, BeltDegree.name, Graduation.graduationDate FROM contactPerson LEFT JOIN Members ON contactPerson.idcontactPerson = Members.contactPerson_idcontactPerson LEFT JOIN Graduation ON Members.idMembers = Graduation.idMembers LEFT JOIN BeltDegree ON Graduation.idBeltDegree = BeltDegree.idBeltDegree";
+				$sql = "SELECT Members.idMembers, Members.firstname, Members.surname, Members.birth, Members.gender, Members.phoneNumber, Members.adress, Members.email, Members.start, Members.active, contactPerson.firstnameK, contactPerson.surnameK, contactPerson.phoneNumberK, contactPerson.emailK, BeltDegree.name, Graduation.graduationDate FROM contactPerson LEFT JOIN Members ON contactPerson.idcontactPerson = Members.contactPerson_idcontactPerson LEFT JOIN Graduation ON Members.idMembers = Graduation.idMembers LEFT JOIN BeltDegree ON Graduation.idBeltDegree = BeltDegree.idBeltDegree order by Members.firstname, Graduation.idBeltDegree desc";
 				
 					if($results = $connection->query($sql))
 					{
@@ -81,7 +75,9 @@
 					$beltegrad = $row['name'];
 					$graderingsdato = $row['graduationDate'];
 					
-					echo("
+					if($tempIdMembers != $idMembers) {
+				
+				echo("
 					<tr>
 					<td>$fornavn</td>
 					<td>$etternavn</td>
@@ -104,17 +100,27 @@
 					<td>$etternavnK</td>
 					<td>$telefonK</td>
 					<td>$emailK</td>
-					<td>$beltegrad</td>
+					<td><a href='viewBelts.php?idMembers=$idMembers'>$beltegrad</a></td>
 					<td>$graderingsdato</td>
 					</tr>");
 					
 				}
+				
+				$tempIdMembers = $idMembers;
+					
+				}
 			
-				?>
 				
 				
-		</table>
-		
+				
+		echo('</table>');
+			
+		}
+		else {
+		echo(" <p class='login-status'> Du er ikke logget inn! </p>");
+		}
+	?>
+	
 	</div>
 	
 </body>

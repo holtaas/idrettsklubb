@@ -1,19 +1,4 @@
-<?php
- include "languages/config.php";
- ?>
-
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Om oss</title>
-<link rel="stylesheet" href="css/stylesheet.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="animated-scroll-anchor.js"></script>
-<script src="scrollHide.js"></script>
-</head>
-	
-<body>
+<?php require('header.php'); ?>
 	<!-- Header starts -->	
 	<nav class="nav one">
 		<a href="idrettsklubb.php"><?php echo $lang['home'];?></a>
@@ -38,7 +23,7 @@
 			<?php
 				include 'connectToDatabase.php';
 		
-				$sql = "SELECT Members.firstname, Members.surname, BeltDegree.name, Coach.title, Coach.image FROM Role LEFT JOIN Coach ON Role.idRole = Coach.idRole LEFT JOIN Members ON Coach.idMembers = Members.idMembers LEFT JOIN Graduation ON Members.idMembers = Graduation.idMembers LEFT JOIN BeltDegree ON Graduation.idBeltDegree = BeltDegree.idBeltDegree";
+				$sql = "SELECT Members.idMembers, Members.firstname, Members.surname, BeltDegree.name, Coach.title, Coach.image FROM Role LEFT JOIN Coach ON Role.idRole = Coach.idRole LEFT JOIN Members ON Coach.idMembers = Members.idMembers LEFT JOIN Graduation ON Members.idMembers = Graduation.idMembers LEFT JOIN BeltDegree ON Graduation.idBeltDegree = BeltDegree.idBeltDegree order by Members.firstname, Graduation.idBeltDegree desc";
 				
 					if($results = $connection->query($sql))
 					{
@@ -52,13 +37,15 @@
 
 				while($row = $results->fetch_assoc())
 				{
-					
+					$idMembers = $row['idMembers'];
 					$fornavn = $row['firstname'];
 					$etternavn = $row['surname'];
 					$beltegrad = $row['name'];
 					$title = $row['title'];
 					$bilde = $row['image'];
 					
+					if($tempIdMembers != $idMembers) {
+				
 					echo("
 						<tr>
 							<td>$title</td>
@@ -67,6 +54,9 @@
 							<td><img src='$bilde'></td>
 						</tr>
 						");
+					}
+				
+					$tempIdMembers = $idMembers;
 				}
 				?>
 		
@@ -261,23 +251,7 @@
 	<!-- Wrapper ends -->
 	
 	<!-- Footer -->	
-	<footer class="footer one">
-
-		<table class="CTA">
-			<tr>
-				<th><?php echo $lang['adress'];?></th>
-				<th><?php echo $lang['mailadress'];?></th>
-				<th><?php echo $lang['mailcity'];?></th>
-				<th>Change language</th>
-			</tr>
-			<tr>
-				<td>Øvre Fossum gård</td>
-				<td>Fossumveien 81</td>
-				<td>0988 Oslo</td>
-				<td><a href="omOss.php?lang=no">Norwegian</a> | <a href="omOss.php?lang=en">English</a></td>
-			</tr>
-		</table>
-	</footer>
+	<?php require('footer.php'); ?>
 	<!-- Footer ends -->
 </body>
 </html>

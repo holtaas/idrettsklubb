@@ -14,18 +14,31 @@ body {
 
 /* Login start */
 
-.loginTable {
-	margin: 30vh auto 0;
-	width: 50vw;
-	text-align: center;
-	border: solid 1px black;
+.navLogin {
+	float: right;
+	padding: 1.2%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	max-width: 70vw;
+	min-width: 40vw;
+
+}
+
+.logininfo {
+	display: inline-flex;
+}
+
+.navLogin img {
+	height: 5vh;
+	flex-wrap: wrap;
 	
 }
 
-.successful {
-	text-align: center;
-	margin-top: 5vh;
+.logininfo button {
+
 }
+
 
 /* Login end */
 

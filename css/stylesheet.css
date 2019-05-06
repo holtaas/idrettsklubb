@@ -37,20 +37,9 @@ body {
 
 /*forskjellig nav farger start */
 .one {
-	background-color:#3866B8;
+	background-color:#006E62;
 }
 
-.two {
-	background-color:#515151;
-}
-
-.three {
-	background-color:#0D0E5B;
-}
-
-.four {
-	background-color:#0F2D0B;
-}
 
 /*forskjellig nav farger ends */
 nav a {
@@ -105,13 +94,13 @@ nav a:hover {
 
 .index h1 {
 	font-size: 3em;
-	color: white;
+	color: #DFE0DF;
 	text-shadow: 3px 3px #313131;
 }
 
 .index h2 {
 	font-size: 6vw;
-	color: white;
+	color: #DFE0DF;
 	text-shadow: 3px 3px #313131;
 }
 
@@ -198,7 +187,7 @@ nav a:hover {
 	border: 1px solid black;
 	padding: 3vh;
 	width: 100%;
-	background-color: #3866B8;
+	background-color: #492F00;
 	color: white;
 }
 
@@ -351,6 +340,10 @@ nav a:hover {
 
 .CTA tr th {
 	margin: 2vh;
+}
+
+.flag {
+	width: 5vh;
 }
 
 /* Footer Ends*/

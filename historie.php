@@ -1,19 +1,4 @@
-<?php
- include "languages/config.php";
- ?>
-
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Historie</title>
-<link rel="stylesheet" href="css/stylesheet.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="animated-scroll-anchor.js"></script>
-<script src="scrollHide.js"></script>
-</head>
-	
-<body>
+<?php require('header.php'); ?>
 	<!-- Header starts -->	
 	<nav class="nav one">
 		<a href="idrettsklubb.php"><?php echo $lang['home'];?></a>
@@ -59,23 +44,7 @@
 	<!-- Wrapper ends -->
 	
 	<!-- Footer -->	
-	<footer class="footer one">
-
-		<table class="CTA">
-			<tr>
-				<th><?php echo $lang['adress'];?></th>
-				<th><?php echo $lang['mailadress'];?></th>
-				<th><?php echo $lang['mailcity'];?></th>
-				<th>Change language</th>
-			</tr>
-			<tr>
-				<td>Øvre Fossum gård</td>
-				<td>Fossumveien 81</td>
-				<td>0988 Oslo</td>
-				<td><a href="historie.php?lang=no">Norwegian</a> | <a href="historie.php?lang=en">English</a></td>
-			</tr>
-		</table>
-	</footer>
+	<?php require('footer.php'); ?>
 	<!-- Footer ends -->
 </body>
 </html>

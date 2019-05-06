@@ -33,7 +33,10 @@
 			$foundUser = false;
 			while($row = $results->fetch_assoc())
 			{
-				if($row['username'] == $brukernavn && $row['password'] == $passord)
+				$brukernavnDatabase = $row['username'];
+				$passordDatabase = $row['password'];
+				
+				if($brukernavnDatabase == $brukernavn && $passordDatabase == $passord)
 				{
 					header("Location: admin.php");
 				}				
