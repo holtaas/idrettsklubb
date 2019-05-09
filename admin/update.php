@@ -108,7 +108,7 @@ include 'connectToDatabase.php';
 
 			if($connection->query($sql))
 			{
-				header('Location: aktivAdmin.php');
+				echo "<meta http-equiv='refresh' content='0'>";
 
 			}
 			else{
@@ -131,5 +131,6 @@ include 'connectToDatabase.php';
 				}
 	}	
 	?>
+	<button><a href="aktivAdmin.php">Tilbake</a></button>
 </body>
 </html>

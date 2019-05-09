@@ -30,7 +30,7 @@ include 'connectToDatabase.php';
 		}
 
 
-		$sql = "SELECT BeltDegree.name, Graduation.graduationDate FROM Graduation LEFT JOIN BeltDegree ON Graduation.idBeltDegree = BeltDegree.idBeltDegree WHERE Graduation.idMembers = $idMembers";
+		$sql = "SELECT BeltDegree.name, Graduation.graduationDate, Graduation.idBeltDegree FROM Graduation LEFT JOIN BeltDegree ON Graduation.idBeltDegree = BeltDegree.idBeltDegree WHERE Graduation.idMembers = $idMembers";
 		if($results = $connection->query($sql))
 		{
 		
@@ -41,10 +41,12 @@ include 'connectToDatabase.php';
 		}	
 		
 		echo("
+		<form method='POST'>
 		<table>
 			<tr>
 				<th>Belter</th>
 				<th>Graderingsdato</th>
+				<th>Slett</th>
 			</tr>
 		
 		");
@@ -52,15 +54,75 @@ include 'connectToDatabase.php';
 		{
 			$beltegrad = $row['name'];
 			$graduationDate = $row["graduationDate"];
+			$idbelterad = $row["idBeltDegree"];
 			echo("
 				<tr>
-					<td>$beltegrad</td>
-					<td>$graduationDate</td>
+					<td>
+					");
+				
+				$sql = "SELECT * FROM BeltDegree";
+				$result = $connection->query($sql);
+				echo "<select name='idBeltDegree'>";
+				while($row = $result->fetch_assoc()) {
+					$idBeltDegree = $row["idBeltDegree"];
+					$name = $row["name"];
+					$selected = '';
+					
+					if($name == $beltegrad)
+					{ $selected = 'selected'; 
+					}				
+					echo "<option $selected value=$idBeltDegree>$name</option>";
+				}
+				echo ("</select>
+					
+					
+					</td>
+					<td><input type='date' name='graduationDate' value='$graduationDate'></td>
+					<td><button name='slett' method='POST' type='submit' value='$idbelterad'>Slett</button></td>
 				</tr>
 				");
 		}
 	
-		echo("</table>");
+		echo("
+		</table>
+		<input type='submit' name='Oppdater' value='Oppdater'>
+		</form>
+		");
+
+	if(isset($_POST["Oppdater"]))
+	{
+		$beltegrad = $_POST["idBeltDegree"];
+		$dato = $_POST["graduationDate"];
+		
+		
+		
+		$sql = "UPDATE Graduation
+				SET idBeltDegree = '$beltegrad', graduationDate = '$dato'
+				WHERE idMembers = '$idMembers' AND idBeltDegree = '$idbelterad';";
+
+			if($connection->query($sql))
+			{
+				echo "<meta http-equiv='refresh' content='0'>";
+
+			}
+			else{
+				echo("Error description: " . mysqli_error($connection));
+			}	
+		
+	}
+
+	if(isset($_POST["slett"])) 
+			{
+				$sql = "DELETE FROM Graduation WHERE idMembers = '$idMembers' AND idBeltDegree = '$idbelterad'";
+				if ($connection->query($sql) === TRUE) 
+				{ 
+					 echo "<meta http-equiv='refresh' content='0'>";
+				}  
+				else
+				{ 
+					echo("Feil i spørring: " . mysqli_error($connection));
+				} 
+			}
 		
 	?>
 	<button><a href="medlemmerAdmin.php">Tilbake</a></button>
