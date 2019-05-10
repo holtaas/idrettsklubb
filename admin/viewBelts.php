@@ -74,8 +74,6 @@ include 'connectToDatabase.php';
 					echo "<option $selected value=$idBeltDegree>$name</option>";
 				}
 				echo ("</select>
-					
-					
 					</td>
 					<td><input type='date' name='graduationDate' value='$graduationDate'></td>
 					<td><button name='slett' method='POST' type='submit' value='$idbelterad'>Slett</button></td>
