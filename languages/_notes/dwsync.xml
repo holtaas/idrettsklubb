@@ -1,1 +1,10 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8" ?><dwsync><file name="config.php" server="elevweb.akershus-fk.no/www_docs/" local="3638946858" remote="3639988846" Dst="2" /><file name="en.php" server="elevweb.akershus-fk.no/www_docs/" local="3638946858" remote="3639988851" Dst="2" /><file name="no.php" server="elevweb.akershus-fk.no/www_docs/" local="3638946858" remote="3639988851" Dst="2" /></dwsync>
+=======
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="config.php" server="elevweb.akershus-fk.no/www_docs/" local="132017221672986473" remote="132017728050000000" Dst="2" />
+<file name="en.php" server="elevweb.akershus-fk.no/www_docs/" local="132017221672986473" remote="132018980120000000" Dst="2" />
+<file name="no.php" server="elevweb.akershus-fk.no/www_docs/" local="132017221672986473" remote="132018980120000000" Dst="2" />
+</dwsync>
+>>>>>>> b84b3b2f30ae21cd824785bf7b5fa131c4b8f8eb
