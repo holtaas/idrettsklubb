@@ -24,6 +24,22 @@ include 'connectToDatabase.php';
 	
 	while($row = $results->fetch_assoc())
 	{
+		$foreignKeyM = $row["contactPerson_idcontactPerson"];
+	}
+
+	$sql = "SELECT Members.idMembers, Members.firstname, Members.surname, Members.birth, Members.phoneNumber, Members.active, Members.adress, Members.email, Members.start, contactPerson.firstnameK, contactPerson.surnameK, contactPerson.phoneNumberK, contactPerson.emailK FROM contactPerson LEFT JOIN Members ON contactPerson.idcontactPerson = Members.contactPerson_idcontactPerson WHERE idMembers = $idMembers OR contactPerson.idcontactPerson = $foreignKeyM";
+	
+		if($results = $connection->query($sql))
+		{
+		
+		}
+		else
+		{
+		echo("Feil i brukerinput: " . mysqli_error($connection));
+		}	
+	
+	while($row = $results->fetch_assoc())
+	{
 		$idMembers = $row["idMembers"];
 		$fornavn = $row["firstname"];
 		$etternavn = $row["surname"];
@@ -33,6 +49,11 @@ include 'connectToDatabase.php';
 		$adress = $row['adress'];
 		$email = $row['email'];
 		$start = $row['start'];
+		
+		$firstnameK = $row['firstnameK'];
+		$surnameK = $row['surnameK'];
+		$phoneNumberK = $row['phoneNumberK'];
+		$emailK = $row['emailK'];
 
 		echo("
 			<form method='POST'>
@@ -64,11 +85,20 @@ include 'connectToDatabase.php';
 				<select name='active'>
 				<option value='1'>Aktiv</option>
 				<option selected value='0'>Ikke aktiv</option>
-				</select><br>
+				</select><br><br>
 				");
 			}
 				
 			echo("
+			<br>Kontaktperson:<br>
+			Fornavn:<br>
+				<input type='text' name='firstnameK' value='$firstnameK'><br>
+				Etternavn:<br>
+				<input type='text' name='surnameK' value='$surnameK'><br>
+				Telefon:<br>
+				<input type='number' name='phoneNumberK' value='$phoneNumberK'><br>
+				Email:<br>
+				<input type='text' name='emailK' value='$emailK'><br>
 			<input type='submit' name='Oppdater' value='Oppdater'><br><br>
 			Beltegrad:<br>
 				
@@ -101,6 +131,10 @@ include 'connectToDatabase.php';
 		$email = $_POST["email"];
 		$start = $_POST["start"];
 		
+		$firstK = $_POST["firstnameK"];
+		$surnK = $_POST["surnameK"];
+		$phoneK = $_POST["phoneNumberK"];
+		$mailK = $_POST["emailK"];
 		
 		$sql = "UPDATE Members
 				SET firstname = '$fornavn', surname = '$etternavn', birth = '$birth',  phoneNumber = '$telefon',  active = '$active',  adress = '$adress',  email = '$email',  start = '$start'
@@ -108,12 +142,25 @@ include 'connectToDatabase.php';
 
 			if($connection->query($sql))
 			{
-				header('Location: aktivAdmin.php');
+				
 
 			}
 			else{
 				echo("Error description: " . mysqli_error($connection));
-			}	
+			}
+		
+		$sql = "UPDATE contactPerson
+				SET firstnamek = '$firstK', surnameK = '$surnK', phoneNumberK = '$phoneK',  emailK = '$mailK'
+				WHERE idcontactPerson = $foreignKeyM;";
+
+			if($connection->query($sql))
+			{
+				echo "<meta http-equiv='refresh' content='0'>";
+
+			}
+			else{
+				echo("Error description: " . mysqli_error($connection));
+			}
 		
 	}	
 	if(isset($_POST["LeggTilGradering"]))
@@ -124,12 +171,13 @@ include 'connectToDatabase.php';
 		$sql = "INSERT INTO Graduation (idMembers, idBeltDegree, graduationDate) VALUES ('$idMembers', '$idBeltDegree', '$graduationDate');";
 				if($connection->query($sql))
 				{
-					echo("En ny gradering for $fornavn $etternavn ble lagt til!");
+					echo("<br>En ny gradering for $fornavn $etternavn ble lagt til!<br>");
 				}
 				else{
 					echo("Feil i brukerinput: " . mysqli_error($connection));
 				}
 	}	
 	?>
+	<button><a href="aktivAdmin.php">Tilbake</a></button>
 </body>
 </html>
